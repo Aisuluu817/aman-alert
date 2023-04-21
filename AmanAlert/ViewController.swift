@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  AmanAlert
-//
-//  Created by Arstanbaeva Aisuluu on 15.04.2023.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,7 +6,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
 }
 

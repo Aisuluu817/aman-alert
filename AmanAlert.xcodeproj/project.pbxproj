@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF31378929F303EA00DFF275 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378829F303EA00DFF275 /* MainViewController.swift */; };
+		AF31378B29F303F300DFF275 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378A29F303F300DFF275 /* InfoViewController.swift */; };
+		AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */; };
+		AF31378F29F3040900DFF275 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378E29F3040900DFF275 /* ChatViewController.swift */; };
+		AF31379129F3059100DFF275 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31379029F3059100DFF275 /* LoginViewController.swift */; };
+		AF31379329F3091400DFF275 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31379229F3091400DFF275 /* BaseViewController.swift */; };
+		AF3137BF29F3AF9300DFF275 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF3137BE29F3AF9300DFF275 /* SnapKit */; };
+		AF3137C229F3B02700DFF275 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AF3137C129F3B02700DFF275 /* Moya */; };
+		AF3137C429F3B15400DFF275 /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137C329F3B15400DFF275 /* OnBoardingController.swift */; };
+		AF3137C729F426D500DFF275 /* OnBoardingSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137C629F426D500DFF275 /* OnBoardingSlideViewController.swift */; };
+		AF3137C929F4407800DFF275 /* ChooseLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137C829F4407800DFF275 /* ChooseLanguageController.swift */; };
 		AFD6C55B29EB0501001F787E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55A29EB0501001F787E /* AppDelegate.swift */; };
 		AFD6C55D29EB0501001F787E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55C29EB0501001F787E /* SceneDelegate.swift */; };
 		AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55E29EB0501001F787E /* ViewController.swift */; };
@@ -17,6 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF31378829F303EA00DFF275 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AF31378A29F303F300DFF275 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		AF31378E29F3040900DFF275 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		AF31379029F3059100DFF275 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AF31379229F3091400DFF275 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AF3137C329F3B15400DFF275 /* OnBoardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
+		AF3137C629F426D500DFF275 /* OnBoardingSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlideViewController.swift; sourceTree = "<group>"; };
+		AF3137C829F4407800DFF275 /* ChooseLanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageController.swift; sourceTree = "<group>"; };
 		AFD6C55729EB0501001F787E /* AmanAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmanAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD6C55A29EB0501001F787E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD6C55C29EB0501001F787E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,12 +53,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3137C229F3B02700DFF275 /* Moya in Frameworks */,
+				AF3137BF29F3AF9300DFF275 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF31379429F391AB00DFF275 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AFD6C57329EBC819001F787E /* BaseTabViewController.swift */,
+				AF31379229F3091400DFF275 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AF31379529F391C600DFF275 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AF31378829F303EA00DFF275 /* MainViewController.swift */,
+				AF31378A29F303F300DFF275 /* InfoViewController.swift */,
+				AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */,
+				AF31378E29F3040900DFF275 /* ChatViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AF3137C529F3B15700DFF275 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				AF3137C329F3B15400DFF275 /* OnBoardingController.swift */,
+				AF3137C629F426D500DFF275 /* OnBoardingSlideViewController.swift */,
+				AF3137C829F4407800DFF275 /* ChooseLanguageController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		AFD6C54E29EB0501001F787E = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +115,10 @@
 				AFD6C57229EB288A001F787E /* Resources */,
 				AFD6C56B29EB0504001F787E /* Info.plist */,
 				AFD6C56329EB0501001F787E /* AmanAlert.xcdatamodeld */,
-				AFD6C57329EBC819001F787E /* BaseTabViewController.swift */,
+				AF31379429F391AB00DFF275 /* Base */,
+				AF31379029F3059100DFF275 /* LoginViewController.swift */,
+				AF31379529F391C600DFF275 /* Main */,
+				AF3137C529F3B15700DFF275 /* OnBoarding */,
 			);
 			path = AmanAlert;
 			sourceTree = "<group>";
@@ -102,6 +157,10 @@
 			dependencies = (
 			);
 			name = AmanAlert;
+			packageProductDependencies = (
+				AF3137BE29F3AF9300DFF275 /* SnapKit */,
+				AF3137C129F3B02700DFF275 /* Moya */,
+			);
 			productName = AmanAlert;
 			productReference = AFD6C55729EB0501001F787E /* AmanAlert.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +189,10 @@
 				Base,
 			);
 			mainGroup = AFD6C54E29EB0501001F787E;
+			packageReferences = (
+				AF3137BD29F3AF9300DFF275 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AF3137C029F3B02700DFF275 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = AFD6C55829EB0501001F787E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -156,10 +219,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3137C929F4407800DFF275 /* ChooseLanguageController.swift in Sources */,
 				AFD6C57429EBC819001F787E /* BaseTabViewController.swift in Sources */,
 				AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */,
+				AF3137C729F426D500DFF275 /* OnBoardingSlideViewController.swift in Sources */,
+				AF31379329F3091400DFF275 /* BaseViewController.swift in Sources */,
+				AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */,
 				AFD6C55B29EB0501001F787E /* AppDelegate.swift in Sources */,
+				AF31378B29F303F300DFF275 /* InfoViewController.swift in Sources */,
+				AF31378929F303EA00DFF275 /* MainViewController.swift in Sources */,
 				AFD6C55D29EB0501001F787E /* SceneDelegate.swift in Sources */,
+				AF31378F29F3040900DFF275 /* ChatViewController.swift in Sources */,
+				AF3137C429F3B15400DFF275 /* OnBoardingController.swift in Sources */,
+				AF31379129F3059100DFF275 /* LoginViewController.swift in Sources */,
 				AFD6C56529EB0501001F787E /* AmanAlert.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +440,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF3137BD29F3AF9300DFF275 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		AF3137C029F3B02700DFF275 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF3137BE29F3AF9300DFF275 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3137BD29F3AF9300DFF275 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		AF3137C129F3B02700DFF275 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3137C029F3B02700DFF275 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AFD6C56329EB0501001F787E /* AmanAlert.xcdatamodeld */ = {

@@ -1,6 +1,5 @@
 import UIKit
 
-
 enum TabBar: CaseIterable {
     case Main
     case Info
@@ -9,10 +8,10 @@ enum TabBar: CaseIterable {
     
     var tabBarItem: UITabBarItem {
         switch self {
-        case .Main: return UITabBarItem(title: nil, image: UIImage(systemName: "ic_main_icon"), selectedImage: nil)
-        case .Info: return UITabBarItem(title: nil, image: UIImage(systemName: "ic_info_icon"), selectedImage: nil)
-        case .AboutApp: return UITabBarItem(title: nil, image: UIImage(systemName: "ic_about_app_icon"), selectedImage: nil)
-        case .Chat: return UITabBarItem(title: nil, image: UIImage(systemName: "ic_chat_icon"), selectedImage: nil)
+        case .Main: return UITabBarItem(title: "Main", image: UIImage(named: "ic_main_icon"), tag: 0)
+        case .Info: return UITabBarItem(title: "Info", image: UIImage(named: "ic_info_icon"), tag: 1)
+        case .AboutApp: return UITabBarItem(title: "AboutApp", image: UIImage(named: "ic_about_app_icon"), tag: 2)
+        case .Chat: return UITabBarItem(title: "Chat", image: UIImage(named: "ic_chat_icon"), tag: 3)
         }
     }
     
@@ -34,12 +33,7 @@ class BaseTabViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .clear
+        tabBar.backgroundColor = .white
         viewControllers = TabBar.allCases.map({ $0.viewController })
-        
-//        let main = UINavigationController(rootViewController: MainViewController())
-//        let info = UINavigationController(rootViewController: InfoViewController())
-//        let aboutApp = UINavigationController(rootViewController: AboutAppViewController())
-//        let chat = UINavigationController(rootViewController: ChatViewController())
     }
 }

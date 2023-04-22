@@ -11,7 +11,7 @@ import UIKit
 class AboutAppViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        title = "ABoutApp"
+        
+        title = "AboutApp"
     }
 }

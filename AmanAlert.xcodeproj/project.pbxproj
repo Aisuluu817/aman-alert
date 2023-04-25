@@ -18,6 +18,11 @@
 		AF3137C429F3B15400DFF275 /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137C329F3B15400DFF275 /* OnBoardingController.swift */; };
 		AF3137C729F426D500DFF275 /* OnBoardingSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137C629F426D500DFF275 /* OnBoardingSlideViewController.swift */; };
 		AF3137C929F4407800DFF275 /* ChooseLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137C829F4407800DFF275 /* ChooseLanguageController.swift */; };
+		AF3137CB29F44BBD00DFF275 /* SosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137CA29F44BBD00DFF275 /* SosViewController.swift */; };
+		AF3137CD29F5955A00DFF275 /* FillOutFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137CC29F5955A00DFF275 /* FillOutFormController.swift */; };
+		AF3137CF29F5A53600DFF275 /* AddContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137CE29F5A53600DFF275 /* AddContactController.swift */; };
+		AF3137D129F6E4FD00DFF275 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137D029F6E4FD00DFF275 /* InfoCell.swift */; };
+		AF3137D429F8243100DFF275 /* CodeInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3137D329F8243100DFF275 /* CodeInputController.swift */; };
 		AFD6C55B29EB0501001F787E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55A29EB0501001F787E /* AppDelegate.swift */; };
 		AFD6C55D29EB0501001F787E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55C29EB0501001F787E /* SceneDelegate.swift */; };
 		AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55E29EB0501001F787E /* ViewController.swift */; };
@@ -37,6 +42,11 @@
 		AF3137C329F3B15400DFF275 /* OnBoardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
 		AF3137C629F426D500DFF275 /* OnBoardingSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlideViewController.swift; sourceTree = "<group>"; };
 		AF3137C829F4407800DFF275 /* ChooseLanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageController.swift; sourceTree = "<group>"; };
+		AF3137CA29F44BBD00DFF275 /* SosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SosViewController.swift; sourceTree = "<group>"; };
+		AF3137CC29F5955A00DFF275 /* FillOutFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillOutFormController.swift; sourceTree = "<group>"; };
+		AF3137CE29F5A53600DFF275 /* AddContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactController.swift; sourceTree = "<group>"; };
+		AF3137D029F6E4FD00DFF275 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		AF3137D329F8243100DFF275 /* CodeInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputController.swift; sourceTree = "<group>"; };
 		AFD6C55729EB0501001F787E /* AmanAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmanAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD6C55A29EB0501001F787E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD6C55C29EB0501001F787E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,8 +85,11 @@
 			children = (
 				AF31378829F303EA00DFF275 /* MainViewController.swift */,
 				AF31378A29F303F300DFF275 /* InfoViewController.swift */,
+				AF3137CE29F5A53600DFF275 /* AddContactController.swift */,
 				AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */,
 				AF31378E29F3040900DFF275 /* ChatViewController.swift */,
+				AF3137CC29F5955A00DFF275 /* FillOutFormController.swift */,
+				AF3137D029F6E4FD00DFF275 /* InfoCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -89,6 +102,15 @@
 				AF3137C829F4407800DFF275 /* ChooseLanguageController.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		AF3137D229F81D3F00DFF275 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				AF31379029F3059100DFF275 /* LoginViewController.swift */,
+				AF3137D329F8243100DFF275 /* CodeInputController.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		AFD6C54E29EB0501001F787E = {
@@ -116,9 +138,10 @@
 				AFD6C56B29EB0504001F787E /* Info.plist */,
 				AFD6C56329EB0501001F787E /* AmanAlert.xcdatamodeld */,
 				AF31379429F391AB00DFF275 /* Base */,
-				AF31379029F3059100DFF275 /* LoginViewController.swift */,
+				AF3137D229F81D3F00DFF275 /* Authorization */,
 				AF31379529F391C600DFF275 /* Main */,
 				AF3137C529F3B15700DFF275 /* OnBoarding */,
+				AF3137CA29F44BBD00DFF275 /* SosViewController.swift */,
 			);
 			path = AmanAlert;
 			sourceTree = "<group>";
@@ -221,16 +244,21 @@
 			files = (
 				AF3137C929F4407800DFF275 /* ChooseLanguageController.swift in Sources */,
 				AFD6C57429EBC819001F787E /* BaseTabViewController.swift in Sources */,
+				AF3137D429F8243100DFF275 /* CodeInputController.swift in Sources */,
 				AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */,
 				AF3137C729F426D500DFF275 /* OnBoardingSlideViewController.swift in Sources */,
 				AF31379329F3091400DFF275 /* BaseViewController.swift in Sources */,
+				AF3137D129F6E4FD00DFF275 /* InfoCell.swift in Sources */,
+				AF3137CF29F5A53600DFF275 /* AddContactController.swift in Sources */,
 				AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */,
 				AFD6C55B29EB0501001F787E /* AppDelegate.swift in Sources */,
 				AF31378B29F303F300DFF275 /* InfoViewController.swift in Sources */,
 				AF31378929F303EA00DFF275 /* MainViewController.swift in Sources */,
 				AFD6C55D29EB0501001F787E /* SceneDelegate.swift in Sources */,
 				AF31378F29F3040900DFF275 /* ChatViewController.swift in Sources */,
+				AF3137CB29F44BBD00DFF275 /* SosViewController.swift in Sources */,
 				AF3137C429F3B15400DFF275 /* OnBoardingController.swift in Sources */,
+				AF3137CD29F5955A00DFF275 /* FillOutFormController.swift in Sources */,
 				AF31379129F3059100DFF275 /* LoginViewController.swift in Sources */,
 				AFD6C56529EB0501001F787E /* AmanAlert.xcdatamodeld in Sources */,
 			);

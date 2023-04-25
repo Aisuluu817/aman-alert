@@ -12,7 +12,9 @@ import UIKit
 class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUp()
+        setUpView()
+        configure()
+        setUpConstraints()
     }
  
     private func setUp() {
@@ -25,4 +27,8 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
 //        view.backgroundColor = Asset.clientBackround.color
     }
+    
+    func setUpView() {}
+    func configure() {}
+    func setUpConstraints() {}
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B329F9A58700604D2E /* FeedbackController.swift */; };
 		AF31378929F303EA00DFF275 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378829F303EA00DFF275 /* MainViewController.swift */; };
 		AF31378B29F303F300DFF275 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378A29F303F300DFF275 /* InfoViewController.swift */; };
 		AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF0746B329F9A58700604D2E /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		AF31378829F303EA00DFF275 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AF31378A29F303F300DFF275 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				AF3137D029F6E4FD00DFF275 /* InfoCell.swift */,
 				AF3137D729F82A9100DFF275 /* MainSosContactController.swift */,
 				AF3137D929F82D5000DFF275 /* RadioButtonCell.swift */,
+				AF0746B329F9A58700604D2E /* FeedbackController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				AF3137C929F4407800DFF275 /* ChooseLanguageController.swift in Sources */,
 				AFD6C57429EBC819001F787E /* BaseTabViewController.swift in Sources */,
+				AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */,
 				AF3137DA29F82D5000DFF275 /* RadioButtonCell.swift in Sources */,
 				AF3137D429F8243100DFF275 /* CodeInputController.swift in Sources */,
 				AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */,

@@ -1,15 +1,22 @@
+//
+//  FeedbackController.swift
+//  AmanAlert
+//
+//  Created by Arstanbaeva Aisuluu on 27.04.2023.
+//
+
 import Foundation
 import UIKit
 import SnapKit
 
 
-class ChooseLanguageController: UIViewController {
+class FeedbackController: UIViewController {
     
     let image = UIImageView(image: UIImage(named: "ic_aman_blue"))
     
     let label: UILabel = {
         let text = UILabel()
-        text.text = "Выберите язык для \nиспользования"
+        text.text = "Как Вы оцените \nнаше приложение?"
         text.font = .boldSystemFont(ofSize: 28)
         text.textAlignment = .center
         text.textColor = .black
@@ -17,12 +24,12 @@ class ChooseLanguageController: UIViewController {
         return text
     }()
     
-    lazy var startButton: UIButton = {
+    lazy var finishButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 22
         button.backgroundColor = UIColor(named: "blueButtonColor")
-        button.setTitle("Выбрать", for: .normal)
+        button.setTitle("Закончить", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
         return button
     }()
@@ -32,6 +39,20 @@ class ChooseLanguageController: UIViewController {
         tv.register(RadioButtonCell.self, forCellReuseIdentifier: "cell")
         return tv
     }()
+    
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 22
+        button.backgroundColor = .white
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.gray.cgColor
+        button.setTitle("Назад", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        return button
+    }()
+    
+    let staskView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +69,11 @@ class ChooseLanguageController: UIViewController {
     }
     
     func configure() {
+       
         view.addSubview(image)
         view.addSubview(label)
-        view.addSubview(startButton)
+        view.addSubview(backButton)
+        view.addSubview(finishButton)
         view.addSubview(tableView)
     }
     
@@ -66,26 +89,32 @@ class ChooseLanguageController: UIViewController {
         }
         
         tableView.snp.makeConstraints {
-            $0.top.equalTo(label.snp.bottom).offset(30)
+            $0.top.equalTo(label.snp.bottom).offset(20)
             $0.leading.equalToSuperview().offset(30)
             $0.trailing.equalToSuperview().offset(-30)
-            $0.bottom.equalTo(startButton.snp.top).offset(-10)
+            $0.bottom.equalTo(finishButton.snp.top).offset(-10)
         }
         
-        startButton.snp.makeConstraints {
+        backButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-40)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(290)
+            $0.leading.equalToSuperview().offset(20)
+            $0.width.equalTo(165)
             $0.height.equalTo(45)
         }
         
+        finishButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().offset(-40)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.width.equalTo(165)
+            $0.height.equalTo(45)
+        }
     }
 }
 
-extension ChooseLanguageController: UITableViewDelegate, UITableViewDataSource {
+extension FeedbackController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -94,6 +123,6 @@ extension ChooseLanguageController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 60
     }
 }

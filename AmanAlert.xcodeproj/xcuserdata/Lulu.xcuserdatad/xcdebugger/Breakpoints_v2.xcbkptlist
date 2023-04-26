@@ -7,160 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AA6A9A50-8167-4D93-AF06-5B14AA1012E9"
-            shouldBeEnabled = "Yes"
+            uuid = "DEE8B5D4-AD74-4359-AA8C-F3358ABE2A4D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AmanAlert/Main/RadioButtonCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "setupRadioButton()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AA6A9A50-8167-4D93-AF06-5B14AA1012E9 - e3875a68a774247a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AmanAlert.RadioButtonCell.setupRadioButton() -&gt; ()"
-                  moduleName = "AmanAlert"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/Main/RadioButtonCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "240">
-               </Location>
-               <Location
-                  uuid = "AA6A9A50-8167-4D93-AF06-5B14AA1012E9 - e3875a68a774247a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AmanAlert.RadioButtonCell.setupRadioButton() -&gt; ()"
-                  moduleName = "AmanAlert"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/Main/RadioButtonCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A162AC7D-FA67-4354-BBAE-2EF390ABA723"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AmanAlert/Main/RadioButtonCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "setupLabel()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A162AC7D-FA67-4354-BBAE-2EF390ABA723 - 9abbb4e1d7bf36a4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AmanAlert.RadioButtonCell.setUpConstraints() -&gt; ()"
-                  moduleName = "AmanAlert"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/Main/RadioButtonCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "A162AC7D-FA67-4354-BBAE-2EF390ABA723 - cde8f89be7c7f2c4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AmanAlert.RadioButtonCell.setupLabel() -&gt; ()"
-                  moduleName = "AmanAlert"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/Main/RadioButtonCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "236">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AB10998A-18E6-452C-AEC7-E647D8EE74C7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AmanAlert/OnBoarding/ChooseLanguageController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AB10998A-18E6-452C-AEC7-E647D8EE74C7 - ab15c7f2ff87785d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AmanAlert.ChooseLanguageController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "AmanAlert"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/OnBoarding/ChooseLanguageController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  uuid = "AB10998A-18E6-452C-AEC7-E647D8EE74C7 - ab15c7f2ff87787e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AmanAlert.ChooseLanguageController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "AmanAlert"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/OnBoarding/ChooseLanguageController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "144">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1F988F37-DD63-4561-B2F1-337667BBB212"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AmanAlert/OnBoarding/ChooseLanguageController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

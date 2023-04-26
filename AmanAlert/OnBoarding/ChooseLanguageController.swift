@@ -30,7 +30,7 @@ class ChooseLanguageController: UIViewController {
     
     let tableView: UITableView = {
         let tv = UITableView()
-        tv.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tv.register(RadioButtonCell.self, forCellReuseIdentifier: "cell")
         return tv
     }()
     
@@ -93,12 +93,8 @@ extension ChooseLanguageController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello"
-        cell.textLabel?.textColor = .blue
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RadioButtonCell
         return cell
         
     }
-    
-    
 }

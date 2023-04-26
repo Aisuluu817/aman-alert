@@ -1,23 +1,17 @@
-
-
 import Foundation
 import UIKit
 
 
 public struct RadioButtonCellModel {
     public let title: String
-    public let subtitle: String?
     public var isSelected: Bool
     
     public init(title: String,
-                subtitle: String? = nil,
                 isSelected: Bool = false) {
         self.title = title
-        self.subtitle = subtitle
         self.isSelected = isSelected
     }
 }
-
 
 class RadioButtonCell: UITableViewCell {
     
@@ -51,16 +45,20 @@ class RadioButtonCell: UITableViewCell {
             label.text = "Heleo"
             label.textColor = .blue
             contentView.addSubview(label)
+            contentView.layer.borderWidth = 0.5
+            contentView.layer.borderColor = UIColor.gray.cgColor
+            let margins = UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8)
+            contentView.frame = contentView.frame.inset(by: margins)
         }
     
     func setUpConstraints() {
         radioButton.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(8)
-            $0.top.equalToSuperview().offset(5)
+            $0.centerY.equalToSuperview()
         }
         
         label.snp.makeConstraints {
-            $0.leading.equalTo(radioButton.snp.trailing).offset(8)
+            $0.leading.equalTo(radioButton.snp.trailing).offset(12)
             $0.centerY.equalToSuperview()
         }
     }

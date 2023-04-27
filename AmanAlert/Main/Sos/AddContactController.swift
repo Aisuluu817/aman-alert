@@ -9,6 +9,9 @@ class AddContactController: UIViewController {
         setUpView()
         configure()
         setUpConstraints()
+        
+        backButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchDown)
+        addButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchDown)
     }
     
     public lazy var screenTitle: UILabel = {
@@ -135,5 +138,9 @@ class AddContactController: UIViewController {
             $0.bottom.equalTo(backButton.snp.top).offset(-8)
             $0.centerX.equalToSuperview()
         }
+    }
+    
+    @objc func backButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }

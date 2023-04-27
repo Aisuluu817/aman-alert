@@ -10,8 +10,9 @@
 		AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B329F9A58700604D2E /* FeedbackController.swift */; };
 		AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B729FA8C9200604D2E /* MainTarget.swift */; };
 		AF0746BB29FA8EE000604D2E /* AuthTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */; };
-		AF0746BD29FA90F800604D2E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BC29FA90F800604D2E /* Models.swift */; };
+		AF0746BD29FA90F800604D2E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BC29FA90F800604D2E /* News.swift */; };
 		AF0746C029FA96AF00604D2E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BF29FA96AF00604D2E /* ViewModel.swift */; };
+		AF0746C229FA9E4700604D2E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746C129FA9E4700604D2E /* NetworkManager.swift */; };
 		AF31378929F303EA00DFF275 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378829F303EA00DFF275 /* MainViewController.swift */; };
 		AF31378B29F303F300DFF275 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378A29F303F300DFF275 /* InfoViewController.swift */; };
 		AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */; };
@@ -43,8 +44,9 @@
 		AF0746B329F9A58700604D2E /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		AF0746B729FA8C9200604D2E /* MainTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTarget.swift; sourceTree = "<group>"; };
 		AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTargetType.swift; sourceTree = "<group>"; };
-		AF0746BC29FA90F800604D2E /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AF0746BC29FA90F800604D2E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		AF0746BF29FA96AF00604D2E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		AF0746C129FA9E4700604D2E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AF31378829F303EA00DFF275 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AF31378A29F303F300DFF275 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				AF0746B729FA8C9200604D2E /* MainTarget.swift */,
 				AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */,
+				AF0746C129FA9E4700604D2E /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -118,7 +121,7 @@
 		AF0746BE29FA910900604D2E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AF0746BC29FA90F800604D2E /* Models.swift */,
+				AF0746BC29FA90F800604D2E /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0746C229FA9E4700604D2E /* NetworkManager.swift in Sources */,
 				AF3137C929F4407800DFF275 /* ChooseLanguageController.swift in Sources */,
 				AFD6C57429EBC819001F787E /* BaseTabViewController.swift in Sources */,
 				AF0746BB29FA8EE000604D2E /* AuthTargetType.swift in Sources */,
@@ -320,7 +324,7 @@
 				AF31379129F3059100DFF275 /* LoginViewController.swift in Sources */,
 				AFD6C56529EB0501001F787E /* AmanAlert.xcdatamodeld in Sources */,
 				AF3137D829F82A9100DFF275 /* MainSosContactController.swift in Sources */,
-				AF0746BD29FA90F800604D2E /* Models.swift in Sources */,
+				AF0746BD29FA90F800604D2E /* News.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

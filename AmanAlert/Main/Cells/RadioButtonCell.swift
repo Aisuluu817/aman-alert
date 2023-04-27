@@ -3,7 +3,7 @@ import UIKit
 
 
 public struct RadioButtonCellModel {
-    public let title: String
+    public var title: String
     public var isSelected: Bool
     
     public init(title: String,
@@ -16,7 +16,7 @@ public struct RadioButtonCellModel {
 class RadioButtonCell: UITableViewCell {
     
     let radioButton = UIButton()
-    let label = UILabel()
+    var label = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

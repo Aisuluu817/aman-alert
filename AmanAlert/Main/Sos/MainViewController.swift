@@ -92,7 +92,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func sosButtonPressed(_ sender: UIButton) {
-        let controller = SosViewController()
+        let controller = MainSosContactController()
         navigationController?.pushViewController(controller, animated: true)
     }
 }

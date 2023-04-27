@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B329F9A58700604D2E /* FeedbackController.swift */; };
+		AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B729FA8C9200604D2E /* MainTarget.swift */; };
+		AF0746BB29FA8EE000604D2E /* AuthTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */; };
+		AF0746BD29FA90F800604D2E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BC29FA90F800604D2E /* Models.swift */; };
+		AF0746C029FA96AF00604D2E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BF29FA96AF00604D2E /* ViewModel.swift */; };
 		AF31378929F303EA00DFF275 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378829F303EA00DFF275 /* MainViewController.swift */; };
 		AF31378B29F303F300DFF275 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378A29F303F300DFF275 /* InfoViewController.swift */; };
 		AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		AF0746B329F9A58700604D2E /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
+		AF0746B729FA8C9200604D2E /* MainTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTarget.swift; sourceTree = "<group>"; };
+		AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTargetType.swift; sourceTree = "<group>"; };
+		AF0746BC29FA90F800604D2E /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AF0746BF29FA96AF00604D2E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		AF31378829F303EA00DFF275 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AF31378A29F303F300DFF275 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +106,23 @@
 			path = Sos;
 			sourceTree = "<group>";
 		};
+		AF0746B929FA8EAE00604D2E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AF0746B729FA8C9200604D2E /* MainTarget.swift */,
+				AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AF0746BE29FA910900604D2E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF0746BC29FA90F800604D2E /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AF31379429F391AB00DFF275 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +160,7 @@
 			children = (
 				AF31379029F3059100DFF275 /* LoginViewController.swift */,
 				AF3137D329F8243100DFF275 /* CodeInputController.swift */,
+				AF0746BF29FA96AF00604D2E /* ViewModel.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -158,6 +184,7 @@
 		AFD6C55929EB0501001F787E /* AmanAlert */ = {
 			isa = PBXGroup;
 			children = (
+				AF0746B929FA8EAE00604D2E /* Network */,
 				AFD6C57129EB284C001F787E /* Application */,
 				AFD6C55E29EB0501001F787E /* ViewController.swift */,
 				AFD6C57229EB288A001F787E /* Resources */,
@@ -167,6 +194,7 @@
 				AF3137D229F81D3F00DFF275 /* Authorization */,
 				AF31379529F391C600DFF275 /* Main */,
 				AF3137C529F3B15700DFF275 /* OnBoarding */,
+				AF0746BE29FA910900604D2E /* Models */,
 			);
 			path = AmanAlert;
 			sourceTree = "<group>";
@@ -269,13 +297,16 @@
 			files = (
 				AF3137C929F4407800DFF275 /* ChooseLanguageController.swift in Sources */,
 				AFD6C57429EBC819001F787E /* BaseTabViewController.swift in Sources */,
+				AF0746BB29FA8EE000604D2E /* AuthTargetType.swift in Sources */,
 				AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */,
 				AF3137DA29F82D5000DFF275 /* RadioButtonCell.swift in Sources */,
 				AF3137D429F8243100DFF275 /* CodeInputController.swift in Sources */,
+				AF0746C029FA96AF00604D2E /* ViewModel.swift in Sources */,
 				AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */,
 				AF3137C729F426D500DFF275 /* OnBoardingSlideViewController.swift in Sources */,
 				AF31379329F3091400DFF275 /* BaseViewController.swift in Sources */,
 				AF3137D129F6E4FD00DFF275 /* InfoCell.swift in Sources */,
+				AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */,
 				AF3137CF29F5A53600DFF275 /* AddContactController.swift in Sources */,
 				AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */,
 				AFD6C55B29EB0501001F787E /* AppDelegate.swift in Sources */,
@@ -289,6 +320,7 @@
 				AF31379129F3059100DFF275 /* LoginViewController.swift in Sources */,
 				AFD6C56529EB0501001F787E /* AmanAlert.xcdatamodeld in Sources */,
 				AF3137D829F82A9100DFF275 /* MainSosContactController.swift in Sources */,
+				AF0746BD29FA90F800604D2E /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

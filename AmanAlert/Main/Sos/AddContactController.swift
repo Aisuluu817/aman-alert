@@ -126,7 +126,7 @@ class AddContactController: UIViewController {
         backButton.snp.makeConstraints {
             $0.width.equalTo(330)
             $0.height.equalTo(45)
-            $0.bottom.equalToSuperview().offset(-40)
+            $0.bottom.equalToSuperview().offset(-120)
             $0.centerX.equalToSuperview()
         }
         addButton.snp.makeConstraints {

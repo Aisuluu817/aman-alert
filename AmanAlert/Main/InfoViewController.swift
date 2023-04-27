@@ -10,6 +10,8 @@ class InfoViewController: UIViewController {
         setUpView()
         configure()
         setUpConstraints()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     public lazy var infoTitle: UILabel = {
@@ -23,14 +25,17 @@ class InfoViewController: UIViewController {
     
     public lazy var tableView: UITableView = {
         let tv = UITableView()
-        tv.register(UITableViewCell.self, forCellReuseIdentifier: "InfoCell")
+        tv.register(InfoCell.self, forCellReuseIdentifier: "InfoCell")
         return tv
     }()
     
-    func setUpView() {}
+    func setUpView() {
+        view.backgroundColor = .white
+    }
     
     func configure() {
         view.addSubview(infoTitle)
+        view.addSubview(tableView)
     }
     
     func setUpConstraints() {
@@ -38,6 +43,29 @@ class InfoViewController: UIViewController {
             $0.top.equalToSuperview().offset(90)
             $0.leading.equalToSuperview().offset(16)
         }
+        
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(infoTitle.snp.bottom).offset(12)
+            $0.leading.equalToSuperview().offset(12)
+            $0.trailing.equalToSuperview().offset(-12)
+            $0.bottom.equalToSuperview().offset(-40)
+        }
+    }
+}
+
+extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as! InfoCell
+        cell.configureCell()
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 107
     }
 }
 

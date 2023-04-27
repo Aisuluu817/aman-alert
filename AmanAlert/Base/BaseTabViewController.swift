@@ -8,10 +8,10 @@ enum TabBar: CaseIterable {
     
     var tabBarItem: UITabBarItem {
         switch self {
-        case .Main: return UITabBarItem(title: "Main", image: UIImage(named: "ic_main_icon"), tag: 0)
-        case .Info: return UITabBarItem(title: "Info", image: UIImage(named: "ic_info_icon"), tag: 1)
-        case .AboutApp: return UITabBarItem(title: "AboutApp", image: UIImage(named: "ic_about_app_icon"), tag: 2)
-        case .Chat: return UITabBarItem(title: "Chat", image: UIImage(named: "ic_chat_icon"), tag: 3)
+        case .Main: return UITabBarItem(title: "Главная", image: UIImage(named: "ic_main_icon"), tag: 0)
+        case .Info: return UITabBarItem(title: "Актуальные", image: UIImage(named: "ic_info_icon"), tag: 1)
+        case .AboutApp: return UITabBarItem(title: "O приложении", image: UIImage(named: "ic_about_app_icon"), tag: 2)
+        case .Chat: return UITabBarItem(title: "Чат", image: UIImage(named: "ic_chat_icon"), tag: 3)
         }
     }
     
@@ -20,7 +20,7 @@ enum TabBar: CaseIterable {
         switch self {
         case .Main: vc = UINavigationController(rootViewController: MainViewController())
         case .Info: vc = UINavigationController(rootViewController: InfoViewController())
-        case .AboutApp: vc = UINavigationController(rootViewController: AboutAppViewController())
+        case .AboutApp: vc = UINavigationController(rootViewController: FeedbackController())
         case .Chat: vc = UINavigationController(rootViewController: ChatViewController())
         }
         vc.setNavigationBarHidden(true, animated: false)

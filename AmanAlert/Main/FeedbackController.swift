@@ -65,7 +65,7 @@ class FeedbackController: UIViewController {
     
     func setUpView() {
         view.backgroundColor = .white
-        title = "Main"
+        title = "O приложении"
     }
     
     func configure() {
@@ -96,14 +96,14 @@ class FeedbackController: UIViewController {
         }
         
         backButton.snp.makeConstraints {
-            $0.bottom.equalToSuperview().offset(-40)
+            $0.bottom.equalToSuperview().offset(-100)
             $0.leading.equalToSuperview().offset(20)
             $0.width.equalTo(165)
             $0.height.equalTo(45)
         }
         
         finishButton.snp.makeConstraints {
-            $0.bottom.equalToSuperview().offset(-40)
+            $0.bottom.equalToSuperview().offset(-100)
             $0.trailing.equalToSuperview().offset(-20)
             $0.width.equalTo(165)
             $0.height.equalTo(45)

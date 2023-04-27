@@ -4,6 +4,7 @@ import Moya
 
 enum AuthTarget {
     case signin
+    case smsCode
 }
 
 extension AuthTarget : TargetType {
@@ -24,6 +25,8 @@ extension AuthTarget : TargetType {
         
         case .signin:
             return "/api/auth/sign-in"
+        case .smsCode:
+            return "/api/mobile/user/sign-in/resend-sms"
         }
     }
     

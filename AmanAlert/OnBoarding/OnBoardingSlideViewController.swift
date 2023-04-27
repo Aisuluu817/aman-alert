@@ -4,6 +4,7 @@ import UIKit
 
 class OnBoardingSlideViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+
     public lazy var startButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -60,6 +61,13 @@ class OnBoardingSlideViewController: UIPageViewController, UIPageViewControllerD
         configure()
         setUpConstraints()
         
+        startButton.addTarget(self, action: #selector(startButtonPressed(_:)), for: .touchDown)
+        
+    }
+    
+    @objc func startButtonPressed(_ sender: UIButton) {
+        let controller = BaseTabViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

@@ -1,9 +1,12 @@
-
 import Foundation
 import UIKit
+import Moya
+import RxSwift
+
 
 class LoginViewController: UIViewController {
     
+    let provider = MoyaProvider<AuthTarget>()
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
 //        if viewModel.isAuthorized {
@@ -31,7 +34,16 @@ class LoginViewController: UIViewController {
         setUpView()
         configure()
         setConstraints()
+        
+        addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchDown)
     }
+    
+    @objc func addButtonPressed(_ sender: UIButton) {
+        requestCode()
+        let controller  = CodeInputController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     let stackView = UIStackView()
     
     public lazy var image: UIImageView = {
@@ -61,7 +73,7 @@ class LoginViewController: UIViewController {
     public lazy var numberLabel: UILabel = {
         let label = UILabel()
         label.text = "Номер телефона"
-        label.font = .boldSystemFont(ofSize: 13)
+        label.font = .boldSystemFont(ofSize: 15)
         label.textColor = .black
         label.textAlignment = .left
         return label
@@ -69,8 +81,8 @@ class LoginViewController: UIViewController {
     
     public lazy var numberTextField: UITextField = {
         let field = UITextField()
-        field.placeholder = "  +996 "
-        field.font = .systemFont(ofSize: 13)
+        field.text = "    996509817818"
+        field.font = .systemFont(ofSize: 15)
         field.layer.cornerRadius = 22
         field.backgroundColor = UIColor.white
         field.layer.borderColor = UIColor.gray.cgColor
@@ -133,5 +145,18 @@ class LoginViewController: UIViewController {
             $0.bottom.equalToSuperview().offset(-40)
             $0.centerX.equalToSuperview()
         }
+    }
+}
+
+extension LoginViewController {
+    func requestCode() {
+        let phoneNumber = numberTextField.text?.replacingOccurrences(of: " ", with: "")
+        debugPrint(phoneNumber)
+       // auth(phoneNumber: String)
+        
+    }
+    
+    func auth(_ phoneNumber: String) {
+     //   provider.request(.signin).map(String.self)
     }
 }

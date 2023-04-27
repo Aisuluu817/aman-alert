@@ -3,6 +3,9 @@ import Foundation
 import UIKit
 
 class InfoViewController: UIViewController {
+    var items: [String] = ["samooborona1", "statistics", "ic_aman_blue", "samooborona1", "samooborona1"]
+    var labels: [String] = ["Уроки самообороны 3", "Cтатистика инцидентов",
+                            "обновления приложения","Уроки самообороны 2", "Уроки самообороны 1" ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +58,14 @@ class InfoViewController: UIViewController {
 
 extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as! InfoCell
         cell.configureCell()
+        cell.image.image = UIImage(named: items[indexPath.row])
+        cell.title.text = labels[indexPath.row]
         return cell
     }
     

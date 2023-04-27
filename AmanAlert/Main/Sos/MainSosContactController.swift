@@ -61,6 +61,7 @@ class MainSosContactController: UIViewController {
         
         backButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchDown)
         addButtonCell.addTarget(self, action: #selector(addButtonCellPressed(_:)), for: .touchDown)
+        callButton.addTarget(self, action: #selector(callButtonPressed), for: .touchDown)
     }
     
     func setUpView() {
@@ -116,6 +117,11 @@ class MainSosContactController: UIViewController {
     
     @objc func addButtonCellPressed(_ sender: UIButton) {
         let controller = AddContactController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func callButtonPressed(_ sender: UIButton) {
+        let controller = SosViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
 }

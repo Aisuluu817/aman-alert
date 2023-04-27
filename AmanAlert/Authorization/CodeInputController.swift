@@ -1,14 +1,24 @@
 
 import Foundation
 import UIKit
+import Moya
+import RxSwift
 
 class CodeInputController: UIViewController {
+    
+    let provider = MoyaProvider<AuthTarget>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         configure()
         setConstraints()
+        addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchDown)
+    }
+    
+    @objc func addButtonPressed(_ sender: UIButton) {
+        let controller = ChooseLanguageController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     public lazy var image: UIImageView = {
@@ -38,7 +48,7 @@ class CodeInputController: UIViewController {
     public lazy var codeLabel: UILabel = {
         let label = UILabel()
         label.text = "Введите код"
-        label.font = .boldSystemFont(ofSize: 13)
+        label.font = .boldSystemFont(ofSize: 15)
         label.textColor = .black
         label.textAlignment = .left
         return label
@@ -47,7 +57,7 @@ class CodeInputController: UIViewController {
     public lazy var codeTextField: UITextField = {
         let field = UITextField()
         field.placeholder = " "
-        field.font = .systemFont(ofSize: 13)
+        field.font = .systemFont(ofSize: 15)
         field.layer.cornerRadius = 22
         field.backgroundColor = UIColor.white
         field.layer.borderColor = UIColor.gray.cgColor
@@ -60,7 +70,7 @@ class CodeInputController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 22
         button.backgroundColor = UIColor(named: "blueButtonColor")
-        button.setTitle("Сохранить", for: .normal)
+        button.setTitle("Авторизоваться", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
         return button
     }()

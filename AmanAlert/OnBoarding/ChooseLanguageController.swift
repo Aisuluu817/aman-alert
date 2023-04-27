@@ -5,6 +5,9 @@ import SnapKit
 
 class ChooseLanguageController: UIViewController {
     
+    var items: [String] = [" Кыргызча", "Русский", "English"]
+    var isSelected: [Bool] = [false, true, false]
+    
     let image = UIImageView(image: UIImage(named: "ic_aman_blue"))
     
     let label: UILabel = {
@@ -40,6 +43,13 @@ class ChooseLanguageController: UIViewController {
         setUpConstraints()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        startButton.addTarget(self, action: #selector(startButtonPressed(_:)), for: .touchDown)
+        
+    }
+    
+    @objc func startButtonPressed(_ sender: UIButton) {
+        let controller = OnBoardingSlideViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func setUpView() {
@@ -90,6 +100,9 @@ extension ChooseLanguageController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RadioButtonCell
+        cell.label.text = items[indexPath.row]
+        let image: UIImage = isSelected[indexPath.row] ? UIImage(named: "ic_radiobutton_checked")! : UIImage(named: "ic_radiobutton_unchecked")!
+        cell.radioButton.setImage(image, for: .normal)
         return cell
     }
     

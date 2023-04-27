@@ -9,6 +9,12 @@ class SosViewController: UIViewController {
         setUpView()
         configure()
         setUpConstraints()
+        
+        cancelButton.addTarget(self, action: #selector(cancelButtonPressed(_:)), for: .touchDown)
+    }
+    
+    @objc func cancelButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     let label: UILabel = {

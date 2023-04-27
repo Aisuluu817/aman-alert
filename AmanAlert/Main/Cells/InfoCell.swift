@@ -30,7 +30,6 @@ class InfoCell: UITableViewCell {
     func configureCell() {
         title.textColor = .black
         title.font = .boldSystemFont(ofSize: 16)
-        title.text = "Уроки самообороны"
         
         desc.textColor = .black
         desc.font = .systemFont(ofSize: 14)

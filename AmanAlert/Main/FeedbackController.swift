@@ -11,6 +11,10 @@ import SnapKit
 
 
 class FeedbackController: UIViewController {
+    var items: [String] = [" Отлично, очень помогли ", " Хорошо",
+                           " Плохо, не помогло", " Не поняла как использовать"]
+    
+    var isSelected: [Bool] = [false, true, false, false]
     
     let image = UIImageView(image: UIImage(named: "ic_aman_blue"))
     
@@ -114,11 +118,14 @@ class FeedbackController: UIViewController {
 extension FeedbackController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RadioButtonCell
+        cell.label.text = items[indexPath.row]
+        let image: UIImage = isSelected[indexPath.row] ? UIImage(named: "ic_radiobutton_checked")! : UIImage(named: "ic_radiobutton_unchecked")!
+        cell.radioButton.setImage(image, for: .normal)
         return cell
     }
     

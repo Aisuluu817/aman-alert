@@ -77,6 +77,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF0746B529FA3DFE00604D2E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AF3137D929F82D5000DFF275 /* RadioButtonCell.swift */,
+				AF3137D029F6E4FD00DFF275 /* InfoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AF0746B629FA3E1D00604D2E /* Sos */ = {
+			isa = PBXGroup;
+			children = (
+				AF3137CA29F44BBD00DFF275 /* SosViewController.swift */,
+				AF3137D729F82A9100DFF275 /* MainSosContactController.swift */,
+				AF3137CC29F5955A00DFF275 /* FillOutFormController.swift */,
+				AF3137CE29F5A53600DFF275 /* AddContactController.swift */,
+				AF31378829F303EA00DFF275 /* MainViewController.swift */,
+			);
+			path = Sos;
+			sourceTree = "<group>";
+		};
 		AF31379429F391AB00DFF275 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,16 +110,12 @@
 		AF31379529F391C600DFF275 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				AF31378829F303EA00DFF275 /* MainViewController.swift */,
+				AF0746B629FA3E1D00604D2E /* Sos */,
 				AF31378A29F303F300DFF275 /* InfoViewController.swift */,
-				AF3137CE29F5A53600DFF275 /* AddContactController.swift */,
 				AF31378C29F303FC00DFF275 /* AboutAppViewController.swift */,
-				AF31378E29F3040900DFF275 /* ChatViewController.swift */,
-				AF3137CC29F5955A00DFF275 /* FillOutFormController.swift */,
-				AF3137D029F6E4FD00DFF275 /* InfoCell.swift */,
-				AF3137D729F82A9100DFF275 /* MainSosContactController.swift */,
-				AF3137D929F82D5000DFF275 /* RadioButtonCell.swift */,
 				AF0746B329F9A58700604D2E /* FeedbackController.swift */,
+				AF31378E29F3040900DFF275 /* ChatViewController.swift */,
+				AF0746B529FA3DFE00604D2E /* Cells */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -150,7 +167,6 @@
 				AF3137D229F81D3F00DFF275 /* Authorization */,
 				AF31379529F391C600DFF275 /* Main */,
 				AF3137C529F3B15700DFF275 /* OnBoarding */,
-				AF3137CA29F44BBD00DFF275 /* SosViewController.swift */,
 			);
 			path = AmanAlert;
 			sourceTree = "<group>";

@@ -1,16 +1,17 @@
 
+
 import Foundation
 import UIKit
 import SnapKit
 
 
-class MainViewController: UIViewController {
+class MainSosContactController: UIViewController {
     
     let image = UIImageView(image: UIImage(named: "ic_aman_blue"))
     
     let label: UILabel = {
         let text = UILabel()
-        text.text = "Вы стали жертвой \nнасилия?"
+        text.text = "SOS"
         text.font = .boldSystemFont(ofSize: 28)
         text.textAlignment = .center
         text.textColor = .black
@@ -18,24 +19,24 @@ class MainViewController: UIViewController {
         return text
     }()
     
-    lazy var startButton: UIButton = {
+    public lazy var callButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 22
         button.backgroundColor = UIColor(named: "blueButtonColor")
-        button.setTitle("Заполнить анкету", for: .normal)
+        button.setTitle("Позвонить", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
         return button
     }()
     
-    lazy var sosButton: UIButton = {
+    lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 22
         button.backgroundColor = .white
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.gray.cgColor
-        button.setTitle("SOS", for: .normal)
+        button.setTitle("Назад", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         return button
     }()
@@ -55,8 +56,7 @@ class MainViewController: UIViewController {
     func configure() {
         view.addSubview(image)
         view.addSubview(label)
-        view.addSubview(startButton)
-        view.addSubview(sosButton)
+        view.addSubview(callButton)
     }
     
     func setUpConstraints() {
@@ -70,16 +70,20 @@ class MainViewController: UIViewController {
             $0.top.equalTo(image.snp.bottom).offset(10)
         }
         
-        startButton.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.width.equalTo(290)
+        backButton.snp.makeConstraints {
+            $0.width.equalTo(330)
             $0.height.equalTo(45)
-        }
-        sosButton.snp.makeConstraints {
-            $0.top.equalTo(startButton.snp.bottom).offset(12)
+            $0.bottom.equalToSuperview().offset(-40)
             $0.centerX.equalToSuperview()
-            $0.width.equalTo(290)
+        }
+        callButton.snp.makeConstraints {
+            $0.width.equalTo(330)
             $0.height.equalTo(45)
+            $0.bottom.equalTo(backButton.snp.top).offset(-8)
+            $0.centerX.equalToSuperview()
         }
     }
 }
+
+
+

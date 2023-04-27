@@ -49,9 +49,9 @@ class FillOutFormController: UIViewController {
         return label
     }()
     
-    public lazy var whatTextField: UITextField = {
-        let field = UITextField()
-        field.placeholder = "  Опишите ситуацию подробно здесь"
+    public lazy var whatTextField: UITextView = {
+        let field = UITextView()
+        field.layer.masksToBounds = true
         field.font = .systemFont(ofSize: 14)
         field.layer.cornerRadius = 10
         field.backgroundColor = UIColor(named: "textFieldColor")
@@ -180,7 +180,7 @@ class FillOutFormController: UIViewController {
         startButton.snp.makeConstraints {
             $0.width.equalTo(330)
             $0.height.equalTo(45)
-            $0.bottom.equalToSuperview().offset(-40)
+            $0.bottom.equalToSuperview().offset(-120)
             $0.centerX.equalToSuperview()
         }
     }

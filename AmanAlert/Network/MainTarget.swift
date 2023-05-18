@@ -1,11 +1,6 @@
-//
-//  MainTarget.swift
-//  AmanAlert
-//
-//  Created by Arstanbaeva Aisuluu on 27.04.2023.
-//
 
 import Foundation
+import RxMoya
 import Moya
 
 enum MainTarget {
@@ -17,7 +12,7 @@ enum MainTarget {
 }
 
 extension MainTarget : TargetType {
-    var task: Moya.Task {
+    var task: Task {
         .requestPlain
     }
     

@@ -27,13 +27,17 @@ class InfoCell: UITableViewCell {
         contentView.addSubview(desc)
     }
     
-    func configureCell() {
+    func configureCell(_ model: News) {
         title.textColor = .black
         title.font = .boldSystemFont(ofSize: 16)
+        title.text = model.title
         
         desc.textColor = .black
         desc.font = .systemFont(ofSize: 14)
-        desc.text = "Читать полностью"
+        desc.text = model.description
+        
+     //   image.image = UIImage(model.urlImage)
+
 
         contentView.layer.cornerRadius = 16
         contentView.layer.borderColor = UIColor(named: "greyBorder")?.cgColor

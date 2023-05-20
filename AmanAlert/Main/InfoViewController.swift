@@ -1,20 +1,40 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class InfoViewController: UIViewController {
-    var items: [String] = ["samooborona1", "statistics", "ic_aman_blue", "samooborona1", "samooborona1"]
-    var labels: [String] = ["Уроки самообороны 3", "Cтатистика инцидентов",
-                            "обновления приложения","Уроки самообороны 2", "Уроки самообороны 1" ]
+//    var items: [String] = ["samooborona1", "statistics", "ic_aman_blue", "samooborona1", "samooborona1"]
+//    var labels: [String] = ["Уроки самообороны 3", "Cтатистика инцидентов",
+//                            "обновления приложения","Уроки самообороны 2", "Уроки самообороны 1" ]
+    
+    var items: [News] = []
+    var networkManager = NetworkManager()
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Info"
         setUpView()
+        fetchNews()
         configure()
+      
         setUpConstraints()
         tableView.delegate = self
         tableView.dataSource = self
+       
+    }
+    
+    public func fetchNews() {
+        networkManager.getAllNews().subscribe{ [weak self] data in
+            switch data {
+            case .success(let news):
+                self?.items.append(contentsOf: news)
+                self?.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }.disposed(by: disposeBag)
     }
     
     public lazy var infoTitle: UILabel = {
@@ -63,9 +83,9 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as! InfoCell
-        cell.configureCell()
-        cell.image.image = UIImage(named: items[indexPath.row])
-        cell.title.text = labels[indexPath.row]
+        cell.image.image = UIImage(named: items[indexPath.row].urlImage)
+        cell.title.text = items[indexPath.row].title
+        cell.desc.text = items[indexPath.row].description
         return cell
     }
     

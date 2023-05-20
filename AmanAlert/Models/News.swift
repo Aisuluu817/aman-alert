@@ -11,6 +11,6 @@ struct News: Codable {
         case id
         case title
         case description
-        case urlImage = "urlImage"
+        case urlImage
     }
 }

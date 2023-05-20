@@ -13,10 +13,19 @@ struct NetworkManager {
         provider.rx.request(.getNewsById(id: id))
             .map(News.self)
     }
-
-    public func getAllNews() -> Observable<[News]> {
+    
+    public func getAllNews() -> Single<[News]> {
         provider.rx.request(.getNews)
-            .map([News].self).asObservable()
+            .map([News].self)
     }
-
+    
+    public func signIn(with phoneNumber: String) {
+        provider.rx.request(.getPsychologists)
+            .map([PsychologistModel].self)
+    }
+    
+    public func report(with phoneNumber: String) {
+       // provider.rx.request(.
+    }
+    
 }

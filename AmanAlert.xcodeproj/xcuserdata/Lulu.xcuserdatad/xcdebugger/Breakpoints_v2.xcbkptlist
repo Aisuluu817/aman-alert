@@ -3,4 +3,69 @@
    uuid = "37FEE644-E786-4539-9F1E-C62B238EB1D9"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "276A1C59-AC1A-494E-A879-3235FCEFA8A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmanAlert/Main/InfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "fetchNews()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "276A1C59-AC1A-494E-A879-3235FCEFA8A3 - 43785219793cc7ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmanAlert.InfoViewController.fetchNews() -&gt; ()"
+                  moduleName = "AmanAlert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/Main/InfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "276A1C59-AC1A-494E-A879-3235FCEFA8A3 - 341b483d234e06dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;AmanAlert.News&gt;, Swift.Error&gt;) -&gt; () in AmanAlert.InfoViewController.fetchNews() -&gt; ()"
+                  moduleName = "AmanAlert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/Main/InfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "844">
+               </Location>
+               <Location
+                  uuid = "276A1C59-AC1A-494E-A879-3235FCEFA8A3 - 341b483d234e06dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;AmanAlert.News&gt;, Swift.Error&gt;) -&gt; () in AmanAlert.InfoViewController.fetchNews() -&gt; ()"
+                  moduleName = "AmanAlert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Lulu/Desktop/ios-development/AmanAlert/AmanAlert/Main/InfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "452">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

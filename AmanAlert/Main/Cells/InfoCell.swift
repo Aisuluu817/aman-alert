@@ -13,12 +13,14 @@ class InfoCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpView()
         setUpConstraints()
+        setUpCardView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUpView()
         setUpConstraints()
+        setUpCardView()
     }
     
     func setUpView() {
@@ -27,20 +29,27 @@ class InfoCell: UITableViewCell {
         contentView.addSubview(desc)
     }
     
-    func configureCell(_ model: News) {
-        title.textColor = .black
-        title.font = .boldSystemFont(ofSize: 16)
-        title.text = model.title
-        
-        desc.textColor = .black
-        desc.font = .systemFont(ofSize: 14)
-        desc.text = model.description
-        
+    func setUpCardView() {
+//        title.textColor = .black
+//        title.font = .boldSystemFont(ofSize: 16)
+//        title.text = model.title
+//
+//        desc.textColor = .black
+//        desc.font = .systemFont(ofSize: 14)
+//        desc.text = model.description
+//
      //   image.image = UIImage(model.urlImage)
 
 
-        contentView.layer.cornerRadius = 16
-        contentView.layer.borderColor = UIColor(named: "greyBorder")?.cgColor
+        contentView.backgroundColor = .white
+       contentView.layer.cornerRadius = 16
+       contentView.layer.masksToBounds = true
+       
+       // Add shadow to the card view
+       contentView.layer.shadowColor = UIColor.gray.cgColor
+       contentView.layer.shadowOffset = CGSize(width: 0, height: 2)
+       contentView.layer.shadowOpacity = 0.5
+       contentView.layer.shadowRadius = 4
     }
     
     func setUpConstraints() {

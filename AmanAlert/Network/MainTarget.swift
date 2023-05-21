@@ -9,6 +9,7 @@ enum MainTarget {
     case getPsychologists
     case report
     case addContact
+    case getAllContacts
 }
 
 extension MainTarget : TargetType {
@@ -36,15 +37,17 @@ extension MainTarget : TargetType {
         case .getPsychologists :
             return "/users/1/todos"
         case .addContact:
-            return "/contact"
+            return "/contact/add"
         case .report:
-            return "/anket"
+            return "/form/create"
+        case .getAllContacts:
+            return "/contact/get-all"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getNews, .getPsychologists, .getNewsById:
+        case .getNews, .getPsychologists, .getNewsById, .getAllContacts:
             return .get
         case .report, .addContact:
             return .post

@@ -36,6 +36,8 @@
 		AF44F0F92A15456F00AF41C6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AF44F0F82A15456F00AF41C6 /* RxCocoa */; };
 		AF44F0FB2A15456F00AF41C6 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = AF44F0FA2A15456F00AF41C6 /* RxRelay */; };
 		AF44F0FD2A15456F00AF41C6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF44F0FC2A15456F00AF41C6 /* RxSwift */; };
+		AF44F0FF2A1A558400AF41C6 /* FormDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF44F0FE2A1A558400AF41C6 /* FormDTO.swift */; };
+		AF44F1012A1A59D100AF41C6 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF44F1002A1A59D100AF41C6 /* Contact.swift */; };
 		AFD6C55B29EB0501001F787E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55A29EB0501001F787E /* AppDelegate.swift */; };
 		AFD6C55D29EB0501001F787E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55C29EB0501001F787E /* SceneDelegate.swift */; };
 		AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6C55E29EB0501001F787E /* ViewController.swift */; };
@@ -68,6 +70,8 @@
 		AF3137D329F8243100DFF275 /* CodeInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputController.swift; sourceTree = "<group>"; };
 		AF3137D729F82A9100DFF275 /* MainSosContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSosContactController.swift; sourceTree = "<group>"; };
 		AF3137D929F82D5000DFF275 /* RadioButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonCell.swift; sourceTree = "<group>"; };
+		AF44F0FE2A1A558400AF41C6 /* FormDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDTO.swift; sourceTree = "<group>"; };
+		AF44F1002A1A59D100AF41C6 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		AFD6C55729EB0501001F787E /* AmanAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmanAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD6C55A29EB0501001F787E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD6C55C29EB0501001F787E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				AF0746BC29FA90F800604D2E /* News.swift */,
+				AF44F0FE2A1A558400AF41C6 /* FormDTO.swift */,
+				AF44F1002A1A59D100AF41C6 /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				AF3137DA29F82D5000DFF275 /* RadioButtonCell.swift in Sources */,
 				AF3137D429F8243100DFF275 /* CodeInputController.swift in Sources */,
 				AF0746C029FA96AF00604D2E /* ViewModel.swift in Sources */,
+				AF44F1012A1A59D100AF41C6 /* Contact.swift in Sources */,
 				AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */,
 				AF3137C729F426D500DFF275 /* OnBoardingSlideViewController.swift in Sources */,
 				AF31379329F3091400DFF275 /* BaseViewController.swift in Sources */,
@@ -341,6 +348,7 @@
 				AFD6C56529EB0501001F787E /* AmanAlert.xcdatamodeld in Sources */,
 				AF3137D829F82A9100DFF275 /* MainSosContactController.swift in Sources */,
 				AF0746BD29FA90F800604D2E /* News.swift in Sources */,
+				AF44F0FF2A1A558400AF41C6 /* FormDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

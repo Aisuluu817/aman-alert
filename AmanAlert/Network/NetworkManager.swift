@@ -8,6 +8,7 @@ struct NetworkManager {
     static let shared = NetworkManager()
     
     let provider = MoyaProvider<MainTarget>()
+    let authProvider = MoyaProvider<AuthTarget>()
     
     public func getNewsById(with id: Int) -> Single<News> {
         provider.rx.request(.getNewsById(id: id))
@@ -19,13 +20,12 @@ struct NetworkManager {
             .map([News].self)
     }
     
-    public func signIn(with phoneNumber: String) {
-        provider.rx.request(.getPsychologists)
-            .map([PsychologistModel].self)
-    }
+//    public func signIn(with phoneNumber: String) {
+//        provider.rx.request(.getPsychologists)
+//            .map([PsychologistModel].self)
+//    }
     
     public func report(with phoneNumber: String) {
        // provider.rx.request(.
     }
-    
 }

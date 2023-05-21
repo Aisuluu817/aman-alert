@@ -22,7 +22,7 @@ class InfoViewController: UIViewController {
         setUpConstraints()
         tableView.delegate = self
         tableView.dataSource = self
-       
+        tableView.separatorStyle = .none
     }
     
     public func fetchNews() {
@@ -86,6 +86,9 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
         cell.image.image = UIImage(named: items[indexPath.row].urlImage)
         cell.title.text = items[indexPath.row].title
         cell.desc.text = items[indexPath.row].description
+        cell.layer.cornerRadius = 16
+        cell.layer.masksToBounds = true
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -93,5 +96,3 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
         return 107
     }
 }
-
-

@@ -7,18 +7,25 @@ enum MainTarget {
     case getNews
     case getNewsById(id: Int)
     case getPsychologists
-    case report
-    case addContact
+    case report(_ form: FormDTO)
+    case addContact(_ contact: Contact)
     case getAllContacts
 }
 
 extension MainTarget : TargetType {
     var task: Task {
-        .requestPlain
+        switch self {
+        case .addContact(let contact):
+            return .requestParameters(parameters: ["name" : contact.name, "phoneNumber": contact.phoneNumber], encoding: URLEncoding.httpBody)
+        case .report(let form):
+            return .requestParameters(parameters: ["name": form.name, "eventDescription": form.eventDescription, "eventLocation": form.eventLocation, "eventTime": form.eventTime ], encoding: URLEncoding.httpBody)
+        default:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {
-        return ["Content-type": "application/json"]
+        return ["Authorization": "Bearer "]
     }
     
     

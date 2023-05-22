@@ -20,12 +20,16 @@ struct NetworkManager {
             .map([News].self)
     }
     
-//    public func signIn(with phoneNumber: String) {
-//        provider.rx.request(.getPsychologists)
-//            .map([PsychologistModel].self)
-//    }
-    
-    public func report(with phoneNumber: String) {
-       // provider.rx.request(.
+    public func addContact() {
+        provider.rx.request(.addContact)
     }
+    
+    public func getContacts() -> Single<[Contact]> {
+        provider.rx.request(.getAllContacts)
+             .map([Contact].self)
+    }
+    
+//    public func report() {
+//        provider.rx.request(.report())
+//    }
 }

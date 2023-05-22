@@ -3,13 +3,24 @@ import Foundation
 import Moya
 
 enum AuthTarget {
-    case signin
-    case smsCode
+    case signin(phoneNumber: String)
+    case smsCode(phoneNumber: String)
+    case confirm(confirmDTO: ConfirmDTO)
 }
 
 extension AuthTarget : TargetType {
     var task: Moya.Task {
-        .requestPlain
+   
+    switch self {
+    case .smsCode(let phoneNumber):
+        return .requestParameters(parameters: ["phoneNumber": phoneNumber], encoding: URLEncoding.queryString)
+    case .confirm(let confirmDTO):
+        return .requestParameters(parameters: ["phoneNumber": confirmDTO.phoneNumber,"code": confirmDTO.code], encoding: URLEncoding.httpBody)
+    case .signin(let phoneNumber):
+        return .requestParameters(parameters: ["": phoneNumber], encoding: URLEncoding.httpBody)
+    default:
+        return .requestPlain
+        }
     }
     
     var headers: [String : String]? {
@@ -27,14 +38,17 @@ extension AuthTarget : TargetType {
             return "/api/auth/sign-in"
         case .smsCode:
             return "/api/mobile/user/sign-in/resend-sms"
+        case .confirm:
+            return "/api/mobile/user/sign-in/confirm"
         }
     }
     
     var method: Moya.Method {
-        return .post
-    }
-    
-        var parameters: [String: Any]? {
-            return nil
+        switch self {
+        case .signin, .confirm:
+            return .post
+        case .smsCode:
+            return .get
+        }
     }
 }

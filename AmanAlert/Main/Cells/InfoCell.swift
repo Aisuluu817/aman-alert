@@ -41,11 +41,12 @@ class InfoCell: UITableViewCell {
      //   image.image = UIImage(model.urlImage)
 
 
-        contentView.backgroundColor = .white
+       contentView.backgroundColor = .white
        contentView.layer.cornerRadius = 16
        contentView.layer.masksToBounds = true
        
        // Add shadow to the card view
+        
        contentView.layer.shadowColor = UIColor.gray.cgColor
        contentView.layer.shadowOffset = CGSize(width: 0, height: 2)
        contentView.layer.shadowOpacity = 0.5

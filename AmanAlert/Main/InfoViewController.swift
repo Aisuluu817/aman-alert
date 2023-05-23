@@ -82,10 +82,12 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as! InfoCell
         cell.image.image = UIImage(named: items[indexPath.row].urlImage)
         cell.title.text = items[indexPath.row].title
         cell.desc.text = items[indexPath.row].description
+        
         cell.layer.cornerRadius = 16
         cell.layer.masksToBounds = true
         cell.selectionStyle = .none

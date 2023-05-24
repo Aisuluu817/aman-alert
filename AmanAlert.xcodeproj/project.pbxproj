@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF0146E72A1D3E530054A992 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146E62A1D3E530054A992 /* LoginViewModel.swift */; };
+		AF0146E92A1E90960054A992 /* ConfirmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146E82A1E90960054A992 /* ConfirmResponse.swift */; };
 		AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B329F9A58700604D2E /* FeedbackController.swift */; };
 		AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B729FA8C9200604D2E /* MainTarget.swift */; };
 		AF0746BB29FA8EE000604D2E /* AuthTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		AF0146E62A1D3E530054A992 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AF0146E82A1E90960054A992 /* ConfirmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmResponse.swift; sourceTree = "<group>"; };
 		AF0746B329F9A58700604D2E /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		AF0746B729FA8C9200604D2E /* MainTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTarget.swift; sourceTree = "<group>"; };
 		AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTargetType.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				AF44F0FE2A1A558400AF41C6 /* FormDTO.swift */,
 				AF44F1002A1A59D100AF41C6 /* Contact.swift */,
 				AF44F1022A1A5EE800AF41C6 /* ConfirmDTO.swift */,
+				AF0146E82A1E90960054A992 /* ConfirmResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				AF3137C729F426D500DFF275 /* OnBoardingSlideViewController.swift in Sources */,
 				AF31379329F3091400DFF275 /* BaseViewController.swift in Sources */,
 				AF3137D129F6E4FD00DFF275 /* InfoCell.swift in Sources */,
+				AF0146E92A1E90960054A992 /* ConfirmResponse.swift in Sources */,
 				AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */,
 				AF3137CF29F5A53600DFF275 /* AddContactController.swift in Sources */,
 				AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */,

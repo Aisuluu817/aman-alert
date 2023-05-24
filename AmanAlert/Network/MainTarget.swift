@@ -25,7 +25,7 @@ extension MainTarget : TargetType {
     }
     
     var headers: [String : String]? {
-        return ["Authorization": "Bearer "]
+        return ["Authorization": "Bearer " + token]
     }
     
     

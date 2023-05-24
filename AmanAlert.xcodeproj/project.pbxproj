@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0146E72A1D3E530054A992 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146E62A1D3E530054A992 /* LoginViewModel.swift */; };
 		AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B329F9A58700604D2E /* FeedbackController.swift */; };
 		AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B729FA8C9200604D2E /* MainTarget.swift */; };
 		AF0746BB29FA8EE000604D2E /* AuthTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF0146E62A1D3E530054A992 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AF0746B329F9A58700604D2E /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		AF0746B729FA8C9200604D2E /* MainTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTarget.swift; sourceTree = "<group>"; };
 		AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTargetType.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				AF31379029F3059100DFF275 /* LoginViewController.swift */,
 				AF3137D329F8243100DFF275 /* CodeInputController.swift */,
 				AF0746BF29FA96AF00604D2E /* ViewModel.swift */,
+				AF0146E62A1D3E530054A992 /* LoginViewModel.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				AF3137CF29F5A53600DFF275 /* AddContactController.swift in Sources */,
 				AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */,
 				AFD6C55B29EB0501001F787E /* AppDelegate.swift in Sources */,
+				AF0146E72A1D3E530054A992 /* LoginViewModel.swift in Sources */,
 				AF31378B29F303F300DFF275 /* InfoViewController.swift in Sources */,
 				AF31378929F303EA00DFF275 /* MainViewController.swift in Sources */,
 				AFD6C55D29EB0501001F787E /* SceneDelegate.swift in Sources */,

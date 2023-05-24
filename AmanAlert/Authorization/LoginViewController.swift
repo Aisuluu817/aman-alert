@@ -7,6 +7,7 @@ import RxSwift
 class LoginViewController: UIViewController {
     
     let provider = MoyaProvider<AuthTarget>()
+    let viewModel: LoginViewModel = .init()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

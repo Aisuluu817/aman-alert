@@ -32,4 +32,15 @@ struct NetworkManager {
     public func report(_ form: FormDTO) {
         provider.rx.request(.report(form))
     }
-}
+    
+    public func signIn(_ phoneNumber: String) {
+        authProvider.rx.request(.signin(phoneNumber: phoneNumber))
+    }
+    
+    public func resendSMS(_ phoneNumber: String) {
+        authProvider.rx.request(.smsCode(phoneNumber: phoneNumber))
+    }
+    
+    public func confirm(_ dto: ConfirmDTO) -> Single<ConfirmResponse>{
+        authProvider.rx.request(.confirm(confirmDTO: dto)).map(ConfirmResponse.self)
+    }}

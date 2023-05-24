@@ -5,5 +5,4 @@ struct ConfirmResponse: Codable {
     let username: String
     let password: String
     let token: String
-   }
 }

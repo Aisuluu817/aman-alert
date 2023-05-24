@@ -25,7 +25,11 @@ extension MainTarget : TargetType {
     }
     
     var headers: [String : String]? {
-        return ["Authorization": "Bearer " + token]
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            return ["Authorization": "Bearer " + token]
+        } else {
+            return ["Content-type": "application/json"]
+        }
     }
     
     

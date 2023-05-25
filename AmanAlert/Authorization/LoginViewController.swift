@@ -6,29 +6,18 @@ import RxSwift
 
 class LoginViewController: UIViewController {
     
-    let provider = MoyaProvider<AuthTarget>()
-    let viewModel: LoginViewModel = .init()
+//    let provider = MoyaProvider<AuthTarget>()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if viewModel.isAuthorized {
-            let controller = BaseTabViewController()
-            controller.modalPresentationStyle = .overFullScreen
-            present(controller, animated: true)
-        } else {
-            let controller = DIService.shared.getVc(SplashViewController.self)
-            controller.modalPresentationStyle = .overFullScreen
-            present(controller, animated: true)
-        }
-    }
-
-    init(viewModel vm: SplashViewModelType) {
-        viewModel = vm
-        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
     
     override func viewDidLoad() {
@@ -40,8 +29,8 @@ class LoginViewController: UIViewController {
         addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchDown)
     }
     
+
     @objc func addButtonPressed(_ sender: UIButton) {
-        requestCode()
         let controller  = CodeInputController()
         navigationController?.pushViewController(controller, animated: true)
     }
@@ -147,18 +136,5 @@ class LoginViewController: UIViewController {
             $0.bottom.equalToSuperview().offset(-40)
             $0.centerX.equalToSuperview()
         }
-    }
-}
-
-extension LoginViewController {
-    func requestCode() {
-        let phoneNumber = numberTextField.text?.replacingOccurrences(of: " ", with: "")
-        debugPrint(phoneNumber)
-       // auth(phoneNumber: String)
-        
-    }
-    
-    func auth(_ phoneNumber: String) {
-     //   provider.request(.signin).map(String.self)
     }
 }

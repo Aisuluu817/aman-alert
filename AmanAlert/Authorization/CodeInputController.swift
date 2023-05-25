@@ -1,4 +1,3 @@
-
 import Foundation
 import UIKit
 import Moya
@@ -6,7 +5,8 @@ import RxSwift
 
 class CodeInputController: UIViewController {
     
-    let provider = MoyaProvider<AuthTarget>()
+    let networkManager = NetworkManager()
+    let codeInputViewModel = CodeInputViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

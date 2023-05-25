@@ -15,7 +15,7 @@ extension AuthTarget : TargetType {
     case .smsCode(let phoneNumber):
         return .requestParameters(parameters: ["phoneNumber": phoneNumber], encoding: URLEncoding.queryString)
     case .confirm(let confirmDTO):
-        return .requestParameters(parameters: ["phoneNumber": confirmDTO.phoneNumber,"code": confirmDTO.code], encoding: URLEncoding.httpBody)
+        return .requestParameters(parameters: ["phoneNumber": confirmDTO.phoneNumber, "code": confirmDTO.code], encoding: JSONEncoding.default)
     case .signin(let phoneNumber):
         return .requestParameters(parameters: ["": phoneNumber], encoding: URLEncoding.httpBody)
     default:

@@ -42,5 +42,6 @@ struct NetworkManager {
     }
     
     public func confirm(_ dto: ConfirmDTO) -> Single<ConfirmResponse>{
-        authProvider.rx.request(.confirm(confirmDTO: dto)).map(ConfirmResponse.self)
+        authProvider.rx.request(.confirm(confirmDTO: dto))
+            .map(ConfirmResponse.self)
     }}

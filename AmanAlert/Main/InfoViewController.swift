@@ -28,7 +28,6 @@ class InfoViewController: UIViewController {
     }
     
     public func fetchNews() {
-        
         networkManager.getAllNews()
             .subscribe{ [weak self] data in
                 switch data {

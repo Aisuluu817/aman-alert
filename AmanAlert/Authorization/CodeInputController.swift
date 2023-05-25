@@ -7,6 +7,9 @@ class CodeInputController: UIViewController {
     
     let networkManager = NetworkManager()
     let codeInputViewModel = CodeInputViewModel()
+    var disposeBag = DisposeBag()
+    var phoneNumber = "996509817818"
+    var code = "5539"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +20,28 @@ class CodeInputController: UIViewController {
     }
     
     @objc func addButtonPressed(_ sender: UIButton) {
+        signInConfirm()
+//        let controller = ChooseLanguageController()
+//        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private func signInConfirm() {
+        let dto = ConfirmDTO(phoneNumber: phoneNumber, code: code)
+        networkManager.confirm(dto)
+            .subscribe{ [weak self] data in
+                switch data {
+                case .success(let response):
+                    let token = "\(response.token)"
+                    UserDefaults.standard.set(token, forKey: "token")
+                    self?.navigateToNextController()
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func navigateToNextController() {
         let controller = ChooseLanguageController()
         navigationController?.pushViewController(controller, animated: true)
     }

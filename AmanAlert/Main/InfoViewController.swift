@@ -1,4 +1,3 @@
-
 import Foundation
 import UIKit
 import RxSwift
@@ -8,9 +7,12 @@ class InfoViewController: UIViewController {
 //    var labels: [String] = ["Уроки самообороны 3", "Cтатистика инцидентов",
 //                            "обновления приложения","Уроки самообороны 2", "Уроки самообороны 1" ]
     
+    private let tableView = UITableView()
+    
     var items: [News] = []
     var networkManager = NetworkManager()
     var disposeBag = DisposeBag()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +28,18 @@ class InfoViewController: UIViewController {
     }
     
     public func fetchNews() {
-        networkManager.getAllNews().subscribe{ [weak self] data in
-            switch data {
-            case .success(let news):
-                self?.items.append(contentsOf: news)
-                self?.tableView.reloadData()
-            case .failure(let error):
-                print(error.localizedDescription)
+        
+        networkManager.getAllNews()
+            .subscribe{ [weak self] data in
+                switch data {
+                case .success(let news):
+                    self?.items.append(contentsOf: news)
+                    self?.tableView.reloadData()
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
-        }.disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
     
     public lazy var infoTitle: UILabel = {
@@ -46,19 +51,21 @@ class InfoViewController: UIViewController {
         return label
     }()
     
-    public lazy var tableView: UITableView = {
-        let tv = UITableView()
-        tv.register(InfoCell.self, forCellReuseIdentifier: "InfoCell")
-        return tv
-    }()
+//    let tv = UITableView()
+//        tv.register(InfoCell.self, forCellReuseIdentifier: "InfoCell")
+//        return tv
     
     func setUpView() {
         view.backgroundColor = .white
     }
     
     func configure() {
+        
+        tableView.register(InfoCell.self, forCellReuseIdentifier: "InfoCell")
+        
         view.addSubview(infoTitle)
         view.addSubview(tableView)
+
     }
     
     func setUpConstraints() {
@@ -77,6 +84,7 @@ class InfoViewController: UIViewController {
 }
 
 extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -84,7 +92,7 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath) as! InfoCell
-        cell.image.image = UIImage(named: items[indexPath.row].urlImage)
+//        cell.image.image = UIImage(named: items[indexPath.row].urlImage)
         cell.title.text = items[indexPath.row].title
         cell.desc.text = items[indexPath.row].description
         
@@ -95,6 +103,6 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 107
+        return 130
     }
 }

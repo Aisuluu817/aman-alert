@@ -1,10 +1,10 @@
-
 import Foundation
 import UIKit
 
 
 class InfoCell: UITableViewCell {
     
+    let cellView = UIView()
     let image = UIImageView(image: UIImage(named: "ic_aman_blue"))
     let title = UILabel()
     let desc = UILabel()
@@ -13,62 +13,56 @@ class InfoCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpView()
         setUpConstraints()
-        setUpCardView()
+        setUpCell()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setUpView()
-        setUpConstraints()
-        setUpCardView()
+        fatalError("Fatal Error")
     }
     
     func setUpView() {
-        contentView.addSubview(image)
-        contentView.addSubview(title)
-        contentView.addSubview(desc)
+        
+        title.numberOfLines = 1
+        desc.numberOfLines = 2
+        
+        cellView.addSubview(image)
+        cellView.addSubview(title)
+        cellView.addSubview(desc)
+        contentView.addSubview(cellView)
     }
     
-    func setUpCardView() {
-//        title.textColor = .black
-//        title.font = .boldSystemFont(ofSize: 16)
-//        title.text = model.title
-//
-//        desc.textColor = .black
-//        desc.font = .systemFont(ofSize: 14)
-//        desc.text = model.description
-//
-     //   image.image = UIImage(model.urlImage)
-
-
-       contentView.backgroundColor = .white
-       contentView.layer.cornerRadius = 16
-       contentView.layer.masksToBounds = true
-       
-       // Add shadow to the card view
+    func setUpCell() {
         
-       contentView.layer.shadowColor = UIColor.gray.cgColor
-       contentView.layer.shadowOffset = CGSize(width: 0, height: 2)
-       contentView.layer.shadowOpacity = 0.5
-       contentView.layer.shadowRadius = 4
+        cellView.layer.borderWidth = CGFloat(1)
+        cellView.layer.borderColor = UIColor(named: "greyBorder")!.cgColor
+        
+        cellView.layer.cornerRadius = 16
     }
     
     func setUpConstraints() {
+        
+        cellView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(6)
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(6)
+            $0.leading.equalToSuperview()
+        }
+        
         image.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(10)
+            $0.bottom.equalToSuperview().inset(10)
+            $0.width.equalTo(self.image.snp.height)
             $0.leading.equalToSuperview().offset(10)
-            $0.width.equalTo(100)
-            $0.height.equalTo(100)
         }
         
         title.snp.makeConstraints {
-            $0.leading.equalTo(image.snp.trailing).offset(8)
-            $0.top.equalToSuperview().offset(10)
+            $0.top.equalToSuperview().offset(20)
+            $0.leading.equalTo(image.snp.trailing).offset(12)
         }
         
         desc.snp.makeConstraints{
-            $0.leading.equalTo(image.snp.trailing).offset(8)
-            $0.centerY.equalToSuperview()
-            
+            $0.top.equalTo(title.snp.bottom).offset(12)
+            $0.leading.equalTo(image.snp.trailing).offset(12)
         }
     }
 }

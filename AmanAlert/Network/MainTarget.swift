@@ -18,7 +18,7 @@ extension MainTarget : TargetType {
         case .addContact(let contact):
             return .requestParameters(parameters: ["name" : contact.name, "phoneNumber": contact.phoneNumber], encoding: URLEncoding.httpBody)
         case .report(let form):
-            return .requestParameters(parameters: ["name": form.name, "eventDescription": form.eventDescription, "eventLocation": form.eventLocation, "eventTime": form.eventTime ], encoding: URLEncoding.httpBody)
+            return .requestParameters(parameters: ["name": form.name, "eventDescription": form.eventDescription, "eventLocation": form.eventLocation, "eventTime": form.eventTime ], encoding: JSONEncoding.default)
         default:
             return .requestPlain
         }
@@ -42,17 +42,17 @@ extension MainTarget : TargetType {
         switch self {
             
         case .getNewsById(id: let id) :
-            return "/photos/\(id)"
+            return "/api/photos/\(id)"
         case .getNews :
             return "/api/news/get-all"
         case .getPsychologists :
-            return "/users/1/todos"
+            return "/api/users/1/todos"
         case .addContact:
-            return "/contact/add"
+            return "/api/contact/add"
         case .report:
-            return "/form/create"
+            return "/api/form/create"
         case .getAllContacts:
-            return "/contact/get-all"
+            return "/api/contact/get-all"
         }
     }
     

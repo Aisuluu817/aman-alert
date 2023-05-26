@@ -1,8 +1,12 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class FillOutFormController: UIViewController {
+    
+    var networkManager = NetworkManager()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,6 +129,18 @@ class FillOutFormController: UIViewController {
         view.addSubview(whenTitle)
         view.addSubview(whenTextField)
         view.addSubview(startButton)
+        
+        startButton.addTarget(self, action: #selector(didStartButton(_:)), for: .touchDown)
+    }
+    
+    @objc func didStartButton(_ sender: UIButton) {
+        let formDTO = FormDTO(name: "Segodnya", eventDescription: "zavtra", eventLocation: "Hello", eventTime: "12:32")
+        
+        networkManager.report(formDTO)
+    }
+    
+    private func navigateToBottomSheet() {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func setUpConstraints() {

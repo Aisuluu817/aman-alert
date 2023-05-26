@@ -20,8 +20,9 @@ struct NetworkManager {
             .map([News].self)
     }
     
-    public func addContact(_ contact: Contact) {
+    public func addContact(_ contact: Contact) -> Single<String> {
         provider.rx.request(.addContact(contact))
+            .mapString()
     }
     
     public func getContacts() -> Single<[Contact]> {

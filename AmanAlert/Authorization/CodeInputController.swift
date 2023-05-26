@@ -9,7 +9,7 @@ class CodeInputController: UIViewController {
     let codeInputViewModel = CodeInputViewModel()
     var disposeBag = DisposeBag()
     var phoneNumber = "996509817818"
-    var code = "5539"
+    var code = "4606"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,7 @@ class CodeInputController: UIViewController {
                 case .success(let response):
                     let token = "\(response.token)"
                     UserDefaults.standard.set(token, forKey: "token")
+                    print("\(token)")
                     self?.navigateToNextController()
                 case .failure(let error):
                     print(error.localizedDescription)

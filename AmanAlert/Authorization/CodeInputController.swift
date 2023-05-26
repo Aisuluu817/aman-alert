@@ -9,7 +9,7 @@ class CodeInputController: UIViewController {
     let codeInputViewModel = CodeInputViewModel()
     var disposeBag = DisposeBag()
     var phoneNumber = "996509817818"
-    var code = "4606"
+    var code = "4805"
     
     override func viewDidLoad() {
         super.viewDidLoad()

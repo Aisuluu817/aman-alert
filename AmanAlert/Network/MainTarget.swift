@@ -19,6 +19,8 @@ extension MainTarget : TargetType {
             return .requestParameters(parameters: ["name" : contact.name, "phoneNumber": contact.phoneNumber], encoding: URLEncoding.httpBody)
         case .report(let form):
             return .requestParameters(parameters: ["name": form.name, "eventDescription": form.eventDescription, "eventLocation": form.eventLocation, "eventTime": form.eventTime ], encoding: JSONEncoding.default)
+        case .getNewsById(let id):
+            return .requestParameters(parameters: ["id": id], encoding: URLEncoding.queryString)
         default:
             return .requestPlain
         }

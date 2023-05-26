@@ -10,6 +10,7 @@
 		AF0146E72A1D3E530054A992 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146E62A1D3E530054A992 /* LoginViewModel.swift */; };
 		AF0146E92A1E90960054A992 /* ConfirmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146E82A1E90960054A992 /* ConfirmResponse.swift */; };
 		AF0146EB2A1E95FD0054A992 /* CodeInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146EA2A1E95FD0054A992 /* CodeInputViewModel.swift */; };
+		AF0146ED2A2134310054A992 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146EC2A2134310054A992 /* InfoDetailViewController.swift */; };
 		AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B329F9A58700604D2E /* FeedbackController.swift */; };
 		AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B729FA8C9200604D2E /* MainTarget.swift */; };
 		AF0746BB29FA8EE000604D2E /* AuthTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */; };
@@ -54,6 +55,7 @@
 		AF0146E62A1D3E530054A992 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AF0146E82A1E90960054A992 /* ConfirmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmResponse.swift; sourceTree = "<group>"; };
 		AF0146EA2A1E95FD0054A992 /* CodeInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputViewModel.swift; sourceTree = "<group>"; };
+		AF0146EC2A2134310054A992 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
 		AF0746B329F9A58700604D2E /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		AF0746B729FA8C9200604D2E /* MainTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTarget.swift; sourceTree = "<group>"; };
 		AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTargetType.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				AF0746B329F9A58700604D2E /* FeedbackController.swift */,
 				AF31378E29F3040900DFF275 /* ChatViewController.swift */,
 				AF0746B529FA3DFE00604D2E /* Cells */,
+				AF0146EC2A2134310054A992 /* InfoDetailViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				AF3137D429F8243100DFF275 /* CodeInputController.swift in Sources */,
 				AF44F1012A1A59D100AF41C6 /* Contact.swift in Sources */,
 				AFD6C55F29EB0501001F787E /* ViewController.swift in Sources */,
+				AF0146ED2A2134310054A992 /* InfoDetailViewController.swift in Sources */,
 				AF0146EB2A1E95FD0054A992 /* CodeInputViewModel.swift in Sources */,
 				AF3137C729F426D500DFF275 /* OnBoardingSlideViewController.swift in Sources */,
 				AF31379329F3091400DFF275 /* BaseViewController.swift in Sources */,

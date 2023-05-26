@@ -50,9 +50,6 @@ class InfoViewController: UIViewController {
         return label
     }()
     
-//    let tv = UITableView()
-//        tv.register(InfoCell.self, forCellReuseIdentifier: "InfoCell")
-//        return tv
     
     func setUpView() {
         view.backgroundColor = .white
@@ -99,6 +96,12 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
         cell.layer.masksToBounds = true
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = InfoDetailsViewController()
+        controller.model = items[indexPath.row]
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

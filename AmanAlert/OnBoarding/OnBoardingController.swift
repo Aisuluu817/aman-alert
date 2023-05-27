@@ -43,6 +43,7 @@ class OnBoardingController: UIViewController {
         super.viewDidLoad()
         setUpView()
         setUpConstraints()
+        self.navigationController?.navigationItem.hidesBackButton = true
     }
     
     

@@ -8,6 +8,10 @@ class FillOutFormController: UIViewController {
     var networkManager = NetworkManager()
     let disposeBag = DisposeBag()
     
+    override func viewWillAppear(_ animated: Bool) {
+//        self.navigationItem.hidesBackButton = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -134,13 +138,28 @@ class FillOutFormController: UIViewController {
     }
     
     @objc func didStartButton(_ sender: UIButton) {
-        let formDTO = FormDTO(name: "Segodnya", eventDescription: "zavtra", eventLocation: "Hello", eventTime: "12:32")
+        let formDTO = FormDTO(name: "Aidai", eventDescription: "stelkered after school 61", eventLocation: "School # 61", eventTime: "19:40")
         
         networkManager.report(formDTO)
+            .subscribe { [weak self] data in
+                switch data {
+                case .success(let response):
+                    print(response)
+                    self?.showSuccessMessage()
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }.disposed(by: disposeBag)
     }
     
-    private func navigateToBottomSheet() {
-        navigationController?.popToRootViewController(animated: true)
+    private func showSuccessMessage() {
+        let alert = UIAlertController(title: "Спасибо, мы приняли!",
+                                  message: "Через некоторое время наши специалисты свяжутся с вами",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        self.present(alert, animated: true)
     }
     
     func setUpConstraints() {

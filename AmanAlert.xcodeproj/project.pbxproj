@@ -11,6 +11,11 @@
 		AF0146E92A1E90960054A992 /* ConfirmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146E82A1E90960054A992 /* ConfirmResponse.swift */; };
 		AF0146EB2A1E95FD0054A992 /* CodeInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146EA2A1E95FD0054A992 /* CodeInputViewModel.swift */; };
 		AF0146ED2A2134310054A992 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146EC2A2134310054A992 /* InfoDetailViewController.swift */; };
+		AF0146EF2A2148560054A992 /* PsychologistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146EE2A2148560054A992 /* PsychologistCell.swift */; };
+		AF0146F12A2149760054A992 /* Psychologist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146F02A2149760054A992 /* Psychologist.swift */; };
+		AF0146F32A2200D00054A992 /* FormReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146F22A2200D00054A992 /* FormReponse.swift */; };
+		AF0146F52A2201CD0054A992 /* ContactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146F42A2201CD0054A992 /* ContactResponse.swift */; };
+		AF0146F72A22253F0054A992 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0146F62A22253F0054A992 /* UINavigationController.swift */; };
 		AF0746B429F9A58700604D2E /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B329F9A58700604D2E /* FeedbackController.swift */; };
 		AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746B729FA8C9200604D2E /* MainTarget.swift */; };
 		AF0746BB29FA8EE000604D2E /* AuthTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */; };
@@ -56,6 +61,11 @@
 		AF0146E82A1E90960054A992 /* ConfirmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmResponse.swift; sourceTree = "<group>"; };
 		AF0146EA2A1E95FD0054A992 /* CodeInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputViewModel.swift; sourceTree = "<group>"; };
 		AF0146EC2A2134310054A992 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
+		AF0146EE2A2148560054A992 /* PsychologistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychologistCell.swift; sourceTree = "<group>"; };
+		AF0146F02A2149760054A992 /* Psychologist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Psychologist.swift; sourceTree = "<group>"; };
+		AF0146F22A2200D00054A992 /* FormReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormReponse.swift; sourceTree = "<group>"; };
+		AF0146F42A2201CD0054A992 /* ContactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactResponse.swift; sourceTree = "<group>"; };
+		AF0146F62A22253F0054A992 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		AF0746B329F9A58700604D2E /* FeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		AF0746B729FA8C9200604D2E /* MainTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTarget.swift; sourceTree = "<group>"; };
 		AF0746BA29FA8EE000604D2E /* AuthTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTargetType.swift; sourceTree = "<group>"; };
@@ -114,6 +124,7 @@
 			children = (
 				AF3137D929F82D5000DFF275 /* RadioButtonCell.swift */,
 				AF3137D029F6E4FD00DFF275 /* InfoCell.swift */,
+				AF0146EE2A2148560054A992 /* PsychologistCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -148,6 +159,9 @@
 				AF44F1002A1A59D100AF41C6 /* Contact.swift */,
 				AF44F1022A1A5EE800AF41C6 /* ConfirmDTO.swift */,
 				AF0146E82A1E90960054A992 /* ConfirmResponse.swift */,
+				AF0146F02A2149760054A992 /* Psychologist.swift */,
+				AF0146F22A2200D00054A992 /* FormReponse.swift */,
+				AF0146F42A2201CD0054A992 /* ContactResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +171,7 @@
 			children = (
 				AFD6C57329EBC819001F787E /* BaseTabViewController.swift */,
 				AF31379229F3091400DFF275 /* BaseViewController.swift */,
+				AF0146F62A22253F0054A992 /* UINavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -347,9 +362,14 @@
 				AF31379329F3091400DFF275 /* BaseViewController.swift in Sources */,
 				AF3137D129F6E4FD00DFF275 /* InfoCell.swift in Sources */,
 				AF0146E92A1E90960054A992 /* ConfirmResponse.swift in Sources */,
+				AF0146F52A2201CD0054A992 /* ContactResponse.swift in Sources */,
 				AF0746B829FA8C9200604D2E /* MainTarget.swift in Sources */,
 				AF3137CF29F5A53600DFF275 /* AddContactController.swift in Sources */,
+				AF0146EF2A2148560054A992 /* PsychologistCell.swift in Sources */,
+				AF0146F12A2149760054A992 /* Psychologist.swift in Sources */,
 				AF31378D29F303FC00DFF275 /* AboutAppViewController.swift in Sources */,
+				AF0146F32A2200D00054A992 /* FormReponse.swift in Sources */,
+				AF0146F72A22253F0054A992 /* UINavigationController.swift in Sources */,
 				AFD6C55B29EB0501001F787E /* AppDelegate.swift in Sources */,
 				AF0146E72A1D3E530054A992 /* LoginViewModel.swift in Sources */,
 				AF31378B29F303F300DFF275 /* InfoViewController.swift in Sources */,

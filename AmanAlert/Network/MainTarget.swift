@@ -5,7 +5,6 @@ import Moya
 
 enum MainTarget {
     case getNews
-    case getNewsById(id: Int)
     case getPsychologists
     case report(_ form: FormDTO)
     case addContact(_ contact: Contact)
@@ -16,11 +15,9 @@ extension MainTarget : TargetType {
     var task: Task {
         switch self {
         case .addContact(let contact):
-            return .requestParameters(parameters: ["name" : contact.name, "phoneNumber": contact.phoneNumber], encoding: URLEncoding.httpBody)
+            return .requestParameters(parameters: ["name" : contact.name, "phoneNumber": contact.phoneNumber], encoding: JSONEncoding.default)
         case .report(let form):
             return .requestParameters(parameters: ["name": form.name, "eventDescription": form.eventDescription, "eventLocation": form.eventLocation, "eventTime": form.eventTime ], encoding: JSONEncoding.default)
-        case .getNewsById(let id):
-            return .requestParameters(parameters: ["id": id], encoding: URLEncoding.queryString)
         default:
             return .requestPlain
         }
@@ -43,8 +40,6 @@ extension MainTarget : TargetType {
         
         switch self {
             
-        case .getNewsById(id: let id) :
-            return "/api/photos/\(id)"
         case .getNews :
             return "/api/news/get-all"
         case .getPsychologists :
@@ -60,7 +55,7 @@ extension MainTarget : TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getNews, .getPsychologists, .getNewsById, .getAllContacts:
+        case .getNews, .getPsychologists, .getAllContacts:
             return .get
         case .report, .addContact:
             return .post

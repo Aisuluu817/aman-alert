@@ -6,7 +6,7 @@ import RxSwift
 
 class LoginViewController: UIViewController {
     
-//    let provider = MoyaProvider<AuthTarget>()
+    private var isAuthorized = false
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -22,13 +22,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if checkIfAuthorized() {
+            navigationController?.pushViewController(BaseTabViewController(), animated: true)
+            navigationController?.removeViewController(LoginViewController.self)
+        }
         setUpView()
         configure()
         setConstraints()
-        
         addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchDown)
     }
     
+    private func checkIfAuthorized() -> Bool {
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            return true
+        }
+        return false
+    }
 
     @objc func addButtonPressed(_ sender: UIButton) {
         let controller  = CodeInputController()

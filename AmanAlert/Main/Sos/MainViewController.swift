@@ -39,12 +39,21 @@ class MainViewController: UIViewController {
         button.setTitleColor(UIColor.black, for: .normal)
         return button
     }()
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         configure()
         setUpConstraints()
+        navigationItem.backBarButtonItem?.tintColor = .white
+        navigationItem.leftBarButtonItem = nil
+//        navigationController?.navigationBar.backItem?.backBarButtonItem?.isHidden = true
     }
     
     func setUpView() {

@@ -42,6 +42,10 @@ class InfoDetailsViewController: UIViewController {
         setupConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.hidesBackButton = false
+    }
+    
     func setupView() {
         view.backgroundColor = .white
     }

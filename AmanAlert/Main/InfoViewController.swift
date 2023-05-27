@@ -13,6 +13,9 @@ class InfoViewController: UIViewController {
     var networkManager = NetworkManager()
     var disposeBag = DisposeBag()
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.hidesBackButton = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

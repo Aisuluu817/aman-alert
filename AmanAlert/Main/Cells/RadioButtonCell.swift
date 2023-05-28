@@ -35,18 +35,29 @@ class RadioButtonCell: UITableViewCell {
     
     func setupRadioButton() {
         radioButton.layer.cornerRadius = 10
-        radioButton.setImage(UIImage(named: "ic_radiobutton_unchecked"), for: .normal)
         contentView.addSubview(radioButton)
     }
     
+    func configureCell(model: RadioButtonCellModel) {
+        label.text = model.title
+        if model.isSelected {
+            radioButton.setImage(UIImage(named: "ic_radiobutton_checked"), for: .normal)
+        } else {
+            radioButton.setImage(UIImage(named: "ic_radiobutton_unchecked"), for: .normal)
+        }
+    }
+    
+    func isSelected(model: RadioButtonCellModel) {
+        if model.isSelected {
+            radioButton.setImage(UIImage(named: "ic_radiobutton_checked"), for: .normal)
+        } else {
+            radioButton.setImage(UIImage(named: "ic_radiobutton_unchecked"), for: .normal)
+        }
+    }
+    
     func setupLabel() {
-        // label.frame = CGRect(x: 40, y: 10, width: contentView.bounds.width - 50, height: 20)
-        label.text = "Heleo"
         label.textColor = .black
         contentView.addSubview(label)
-//        contentView.layer.borderWidth = 0.5
-//        contentView.layer.borderColor = UIColor.gray.cgColor
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)) 
     }
     
     func setUpConstraints() {

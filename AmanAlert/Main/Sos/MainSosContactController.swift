@@ -3,10 +3,18 @@
 import Foundation
 import UIKit
 import SnapKit
+import RxSwift
 
 
 class MainSosContactController: UIViewController {
-    let items: [String] = [" 102 Милиция", " 911 Служба спасения"]
+    
+    let networkManager = NetworkManager()
+    let disposeBag = DisposeBag()
+    
+    var items: [RadioButtonCellModel] = [
+        RadioButtonCellModel(title: " 102 Милиция", isSelected: false),
+        RadioButtonCellModel(title: " 911 Служба спасения", isSelected: false)]
+    
     let image = UIImageView(image: UIImage(named: "ic_aman_blue"))
     
     let label: UILabel = {
@@ -54,6 +62,7 @@ class MainSosContactController: UIViewController {
         setUpView()
         configure()
         setUpConstraints()
+        fetchContacts()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -124,7 +133,24 @@ class MainSosContactController: UIViewController {
         let controller = SosViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    private func fetchContacts() {
+        networkManager.getContacts()
+            .subscribe { [weak self] data in
+                switch data {
+                case .success(let contacts):
+                    self?.items.append(contentsOf: contacts.map({ contact in
+                        return RadioButtonCellModel(title: contact.name, isSelected: false)
+                    }))
+                    self?.tableView.reloadData()
+                    print(self?.items)
+                case .failure(let error):
+                    print(error)
+                }
+            }.disposed(by: disposeBag)
+    }
 }
+
 
 extension MainSosContactController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -133,10 +159,12 @@ extension MainSosContactController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RadioButtonCell", for: indexPath) as! RadioButtonCell
-        cell.label.text = items[indexPath.row]
+        cell.configureCell(model: items[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        items[indexPath.row].isSelected = !items[indexPath.row].isSelected
+        tableView.reloadData()
+    }
 }
-
-
-

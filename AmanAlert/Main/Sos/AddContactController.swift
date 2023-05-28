@@ -1,8 +1,12 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class AddContactController: UIViewController {
+    
+    let networkManager = NetworkManager()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,7 +15,7 @@ class AddContactController: UIViewController {
         setUpConstraints()
         
         backButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchDown)
-        addButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchDown)
+        addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchDown)
     }
     
     public lazy var screenTitle: UILabel = {
@@ -142,5 +146,32 @@ class AddContactController: UIViewController {
     
     @objc func backButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func addButtonPressed(_ sender: UIButton) {
+        let contact = Contact(name: "Mummy", phoneNumber: "996501515333")
+        addContact(contact)
+    }
+    
+    private func addContact(_ model: Contact) {
+        networkManager.addContact(model)
+            .subscribe { [weak self] data in
+                switch data {
+                case .success(let response):
+                    print(response)
+                    self?.showSuccessMessage()
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }.disposed(by: disposeBag)
+    }
+    
+    private func showSuccessMessage() {
+        let alert = UIAlertController(title: "Ваш контакт был добавлен!", message: nil,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true)
     }
 }

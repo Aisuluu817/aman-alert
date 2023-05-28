@@ -91,34 +91,36 @@ class PsychologistCell: UITableViewCell {
         lowerPart.bottomAnchor.constraint(equalTo: cellView.bottomAnchor).isActive = true
         
         avatarImage.translatesAutoresizingMaskIntoConstraints = false
+        avatarImage.widthAnchor.constraint(equalToConstant: 90).isActive = true
+        avatarImage.heightAnchor.constraint(equalToConstant: 90).isActive = true
         avatarImage.topAnchor.constraint(equalTo: upperPart.topAnchor).isActive = true
                avatarImage.leftAnchor.constraint(equalTo: upperPart.leftAnchor).isActive = true
-               avatarImage.widthAnchor.constraint(equalTo: upperPart.widthAnchor, multiplier: 7/20).isActive = true
+//               avatarImage.widthAnchor.constraint(equalTo: upperPart.widthAnchor, multiplier: 1/3).isActive = true
                avatarImage.bottomAnchor.constraint(equalTo: upperPart.bottomAnchor).isActive = true
                
                nameLabel.translatesAutoresizingMaskIntoConstraints = false
     
         nameLabel.topAnchor.constraint(equalTo: upperPart.topAnchor).isActive = true
 
-        nameLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor).isActive = true
+        nameLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: 10).isActive = true
                 nameLabel.rightAnchor.constraint(equalTo: upperPart.rightAnchor).isActive = true
                 
                 descLabel.translatesAutoresizingMaskIntoConstraints = false
                 
                 descLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
-                descLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor).isActive = true
+                descLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: 10).isActive = true
                 descLabel.rightAnchor.constraint(equalTo: upperPart.rightAnchor).isActive = true
         
         xpLabel.translatesAutoresizingMaskIntoConstraints = false
                 
                 xpLabel.topAnchor.constraint(equalTo: descLabel.bottomAnchor).isActive = true
-                xpLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor).isActive = true
+                xpLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: 10).isActive = true
                 xpLabel.rightAnchor.constraint(equalTo: upperPart.rightAnchor).isActive = true
                 
                 feedbackLabel.translatesAutoresizingMaskIntoConstraints = false
         
         feedbackLabel.topAnchor.constraint(equalTo: xpLabel.bottomAnchor).isActive = true
-                feedbackLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor).isActive = true
+                feedbackLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: 10).isActive = true
                 feedbackLabel.rightAnchor.constraint(equalTo: upperPart.rightAnchor).isActive = true
                 feedbackLabel.bottomAnchor.constraint(equalTo: upperPart.bottomAnchor).isActive = true
                 

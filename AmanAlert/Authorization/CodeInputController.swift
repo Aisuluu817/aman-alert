@@ -6,24 +6,21 @@ import RxSwift
 class CodeInputController: UIViewController {
     
     let networkManager = NetworkManager()
-    let codeInputViewModel = CodeInputViewModel()
     var disposeBag = DisposeBag()
     var phoneNumber = "996509817818"
-    var code = "4036"
+    var code = "9504"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         configure()
         setConstraints()
-       // navigationController?.setNavigationBarHidden(true, animated: false)
+        codeTextField.delegate = self
         addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchDown)
     }
     
     @objc func addButtonPressed(_ sender: UIButton) {
         signInConfirm()
-//        let controller = ChooseLanguageController()
-//        navigationController?.pushViewController(controller, animated: true)
     }
     
     private func signInConfirm() {
@@ -32,9 +29,11 @@ class CodeInputController: UIViewController {
             .subscribe{ [weak self] data in
                 switch data {
                 case .success(let response):
+                    self?.code = self?.codeTextField.text ?? "1234"
+                    let signInModel = ConfirmDTO(phoneNumber: self!.phoneNumber, code: "9504")
+                    print(signInModel)
                     let token = "\(response.token)"
                     UserDefaults.standard.set(token, forKey: "token")
-                    print("\(token)")
                     self?.navigateToNextController()
                 case .failure(let error):
                     print(error.localizedDescription)
@@ -89,6 +88,7 @@ class CodeInputController: UIViewController {
         field.backgroundColor = UIColor.white
         field.layer.borderColor = UIColor.gray.cgColor
         field.layer.borderWidth = 1
+        field.textContentType = .oneTimeCode
         return field
     }()
     
@@ -147,5 +147,11 @@ class CodeInputController: UIViewController {
             $0.bottom.equalToSuperview().offset(-40)
             $0.centerX.equalToSuperview()
         }
+    }
+}
+
+extension CodeInputController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
     }
 }

@@ -13,7 +13,7 @@ class AddContactController: UIViewController {
         setUpView()
         configure()
         setUpConstraints()
-        
+        nameTextField.delegate = self
         backButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchDown)
         addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchDown)
     }
@@ -149,7 +149,7 @@ class AddContactController: UIViewController {
     }
     
     @objc func addButtonPressed(_ sender: UIButton) {
-        let contact = Contact(name: "Mummy", phoneNumber: "996501515333")
+        let contact = Contact(name: "Zhibek", phoneNumber: "996700000627")
         addContact(contact)
     }
     
@@ -173,5 +173,11 @@ class AddContactController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true)
+    }
+}
+
+extension AddContactController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
     }
 }

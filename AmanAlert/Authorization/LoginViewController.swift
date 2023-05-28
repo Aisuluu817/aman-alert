@@ -7,6 +7,7 @@ import RxSwift
 class LoginViewController: UIViewController {
     
     private var isAuthorized = false
+    let networkManager = NetworkManager()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -29,6 +30,7 @@ class LoginViewController: UIViewController {
         setUpView()
         configure()
         setConstraints()
+        numberTextField.delegate = self
         addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchDown)
     }
     
@@ -41,6 +43,7 @@ class LoginViewController: UIViewController {
 
     @objc func addButtonPressed(_ sender: UIButton) {
         let controller  = CodeInputController()
+      //  networkManager.signIn("996509817818")
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -145,5 +148,11 @@ class LoginViewController: UIViewController {
             $0.bottom.equalToSuperview().offset(-40)
             $0.centerX.equalToSuperview()
         }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
     }
 }

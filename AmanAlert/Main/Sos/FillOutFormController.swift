@@ -17,6 +17,7 @@ class FillOutFormController: UIViewController {
         setUpView()
         configure()
         setUpConstraints()
+        whenTextField.delegate = self
     }
     
     public lazy var formTitle: UILabel = {
@@ -218,5 +219,11 @@ class FillOutFormController: UIViewController {
             $0.bottom.equalToSuperview().offset(-120)
             $0.centerX.equalToSuperview()
         }
+    }
+}
+
+extension FillOutFormController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
     }
 }

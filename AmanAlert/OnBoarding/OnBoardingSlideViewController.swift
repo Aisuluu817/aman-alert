@@ -10,7 +10,7 @@ class OnBoardingSlideViewController: UIPageViewController, UIPageViewControllerD
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 22
         button.backgroundColor = UIColor(named: "blueButtonColor")
-        button.setTitle("Start", for: .normal)
+        button.setTitle("Начать", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
         return button
     }()

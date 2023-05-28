@@ -5,11 +5,24 @@ class ChatViewController: UIViewController {
     
     let tableView = UITableView()
     
-    var items: [Psychologist] = []
+    var items: [Psychologist] = [
+    Psychologist(name: "Эльмира Мукашевна",
+                 description: "MBBS, MS - Психолог, психотерапевт. гештальт терапевт, семейный коуч",
+                 urlImage: "psy1",
+                 rating: "5.0 / 10 отзывов",
+                 stag: "8 лет",
+                 phoneNumber: "996501515333"),
+    Psychologist(name: "Анна Михайлована Р",
+                 description: "MBBS, MS - Психолог, психотерапевт. гештальт терапевт, семейный коуч",
+                 urlImage: "psy2",
+                 rating: "4.9 ",
+                 stag: "5 лет",
+                 phoneNumber: "996555681717")
+    ]
     
     public lazy var chatMenuTitle: UILabel = {
         let label = UILabel()
-        label.text = "Uslugi Psihologa"
+        label.text = "Услуги психолога"
         label.font = .boldSystemFont(ofSize: 28)
         label.textColor = .black
         label.textAlignment = .left
@@ -61,32 +74,42 @@ class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return items.count
-        return 5
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PsychologistCell", for: indexPath) as! PsychologistCell
-        cell.nameLabel.text = "Psychologist"
-        cell.descLabel.text = "MBBS, MS - Психолог, психотерапевт. гештальт терапевт, семейный коуч"
-        cell.xpLabel.text = "12 let kak specialist"
-        cell.feedbackLabel.text = "5 zvezd iz 5"
+        let item = items[indexPath.row]
+        cell.nameLabel.text = item.name
+        cell.descLabel.text = item.description
+        cell.xpLabel.text = item.stag
+        cell.feedbackLabel.text = item.rating
         
-        cell.phoneTitleLabel.text = "phone"
-        cell.phoneLabel.text = "+996 701 222 002"
-        cell.contactTitleLabel.text = "Contact with Whats' App"
-        cell.contactLabel.text = "+996 701 222 002"
+        cell.phoneTitleLabel.text = "Номер телефона: "
+        cell.phoneLabel.text = item.phoneNumber
+        cell.contactTitleLabel.text = "Связаться по WhatsApp: "
+        cell.contactLabel.text = item.phoneNumber
+        cell.avatarImage.image = UIImage(named: item.urlImage ?? "ic_aman_blue")
         
         cell.selectionStyle = .none
         return cell
     }
     
-//        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//            return 100
-//        }
+    //        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //            return 100
+    //        }
     
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //
-    //    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let phoneNumber =  "+996501502502" // you need to change this number
+        let appURL = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)")!
+        if UIApplication.shared.canOpenURL(appURL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+            }
+            else {
+                UIApplication.shared.openURL(appURL)
+            }
+        }
+    }
 }
